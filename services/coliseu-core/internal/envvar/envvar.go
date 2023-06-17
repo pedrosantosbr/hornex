@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Pedr0visk/x1/internal"
+	"github.com/pedrosantosbr/x5/internal"
 
 	"github.com/joho/godotenv"
 )

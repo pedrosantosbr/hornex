@@ -11,9 +11,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Pedr0visk/x1/internal/envvar"
+	"github.com/pedrosantosbr/x5/internal/envvar"
 
-	internaldomain "github.com/Pedr0visk/x1/internal"
+	internaldomain "github.com/pedrosantosbr/x5/internal"
 
 	"github.com/didip/tollbooth/v6"
 	"github.com/didip/tollbooth/v6/limiter"
@@ -47,8 +47,6 @@ func run(env, address string) (<-chan error, error) {
 			h.ServeHTTP(w, r)
 		})
 	}
-
-	//
 
 	//-
 

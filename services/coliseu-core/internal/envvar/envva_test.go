@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/Pedr0visk/x1/internal/envvar"
+	"github.com/pedrosantosbr/x5/internal/envvar"
 
 	"github.com/google/go-cmp/cmp"
 )

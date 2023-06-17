@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/Pedr0visk/x1/internal"
-	services "github.com/Pedr0visk/x1/internal/services/team"
+	services "github.com/git/x5/internal/services/team"
+	"github.com/pedrosantosbr/x5/internal"
 
 	"github.com/go-chi/chi/v5"
 )

@@ -3,7 +3,7 @@ package services
 import (
 	"context"
 
-	"github.com/Pedr0visk/x1/internal"
+	"github.com/pedrosantosbr/x5/internal"
 )
 
 type TeamRepository interface {

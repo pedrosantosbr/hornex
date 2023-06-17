@@ -1,7 +1,7 @@
 package services
 
 import (
-	"github.com/Pedr0visk/x1/internal"
+	"github.com/pedrosantosbr/x5/internal"
 
 	validation "github.com/go-ozzo/ozzo-validation"
 )

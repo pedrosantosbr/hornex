@@ -1,4 +1,4 @@
-package service
+package services
 
 import (
 	validation "github.com/go-ozzo/ozzo-validation"

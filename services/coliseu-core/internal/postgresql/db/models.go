@@ -12,6 +12,7 @@ import (
 type Users struct {
 	ID          uuid.UUID
 	Email       string
+	Password    string
 	FirstName   pgtype.Text
 	LastName    pgtype.Text
 	DateOfBirth pgtype.Date

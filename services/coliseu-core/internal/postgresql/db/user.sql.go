@@ -9,39 +9,27 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const InsertUser = `-- name: InsertUser :one
 INSERT INTO users (
   email,
-  first_name,
-  last_name,
-  date_of_birth
+  password
 )
 VALUES (
   $1,
-  $2,
-  $3,
-  $4
+  $2
 )
 RETURNING id
 `
 
 type InsertUserParams struct {
-	Email       string
-	FirstName   pgtype.Text
-	LastName    pgtype.Text
-	DateOfBirth pgtype.Date
+	Email    string
+	Password string
 }
 
 func (q *Queries) InsertUser(ctx context.Context, arg InsertUserParams) (uuid.UUID, error) {
-	row := q.db.QueryRow(ctx, InsertUser,
-		arg.Email,
-		arg.FirstName,
-		arg.LastName,
-		arg.DateOfBirth,
-	)
+	row := q.db.QueryRow(ctx, InsertUser, arg.Email, arg.Password)
 	var id uuid.UUID
 	err := row.Scan(&id)
 	return id, err

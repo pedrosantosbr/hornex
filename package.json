@@ -1,0 +1,7 @@
+{
+  "name": "Coliseum",
+  "version": "1.0.0",
+  "description": "A platform for competitive games",
+  "main": "index.js",
+  "license": "MIT"
+}

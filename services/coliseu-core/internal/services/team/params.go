@@ -1,7 +1,7 @@
 package services
 
 import (
-	"coliseu/internal"
+	"github.com/Pedr0visk/x1/internal"
 
 	validation "github.com/go-ozzo/ozzo-validation"
 )

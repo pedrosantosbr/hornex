@@ -1,11 +1,12 @@
 package rest
 
 import (
-	"coliseu/internal"
-	services "coliseu/internal/services/team"
 	"context"
 	"encoding/json"
 	"net/http"
+
+	"github.com/Pedr0visk/x1/internal"
+	services "github.com/Pedr0visk/x1/internal/services/team"
 
 	"github.com/go-chi/chi/v5"
 )

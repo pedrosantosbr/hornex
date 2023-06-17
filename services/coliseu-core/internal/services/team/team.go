@@ -1,8 +1,9 @@
 package services
 
 import (
-	"coliseu/internal"
 	"context"
+
+	"github.com/Pedr0visk/x1/internal"
 )
 
 type TeamRepository interface {

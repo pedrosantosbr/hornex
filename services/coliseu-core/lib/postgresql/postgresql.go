@@ -8,6 +8,8 @@ import (
 
 	"github.com/jackc/pgx/v5/pgxpool"
 	_ "github.com/jackc/pgx/v5/stdlib"
+	"github.com/pedrosantosbr/x5/internal"
+	"github.com/pedrosantosbr/x5/internal/envvar"
 )
 
 // NewPostgreSQL instantiates the PostgreSQL database using configuration defined in environment variables.

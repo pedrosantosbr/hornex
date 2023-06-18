@@ -13,7 +13,7 @@ COPY . .
 RUN go mod download
 
 RUN CGO_ENABLED=1 GOOS=linux go build -a -installsuffix cgo -ldflags "-extldflags -static" -tags musl \
-      github.com/pedrosantosbr/x5/
+      github.com/pedrosantosbr/x5/cmd/rest-server
 
 RUN CGO_ENABLED=0 GOOS=linux go install -a -installsuffix cgo -ldflags "-s -w" -tags 'postgres' \
       github.com/golang-migrate/migrate/v4/cmd/migrate@v4.15.2

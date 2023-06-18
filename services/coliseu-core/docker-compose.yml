@@ -4,16 +4,18 @@ services:
   rest-server:
     build:
       context: .
-      dockerfile: ./build/rest-server/dockerfile
+      dockerfile: ./build/rest-server/Dockerfile
     ports:
       - "9234:9234"
     command: rest-server -env /api/env.example
     environment:
       DATABASE_HOST: "postgres"
-
+      VAULT_ADDRESS:     "http://vault:8300"
     depends_on:
       postgres:
         condition: service_healthy
+      vault:
+        condition: service_started
 
   postgres:
     image: postgres:15.2-bullseye

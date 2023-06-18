@@ -80,7 +80,7 @@ func run(env, address string) (<-chan error, error) {
 		return nil, internaldomain.WrapErrorf(err, internaldomain.ErrorCodeUnknown, "internal.NewPostgreSQL")
 	}
 
-	//-
+	// - Server initialization
 
 	srv, err := newServer(ServerConfig{
 		Address:     address,

@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  rest-server:
+    build:
+      context: .
+      dockerfile: ./build/rest-server/dockerfile
+    ports:
+      - "9234:9234"
+    command: rest-server -env /api/env.example
+    environment:
+      DATABASE_HOST: "postgres"
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:15.2-bullseye
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB:               "dbname"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+      POSTGRES_PASSWORD:         "password"
+      POSTGRES_USER:             "user"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 40s
+
+  vault:
+    image: vault:1.12.4
+    ports:
+      - "8300:8300"
+    cap_add:
+      - IPC_LOCK
+    environment:
+      VAULT_DEV_LISTEN_ADDRESS: "0.0.0.0:8300"
+      VAULT_DEV_ROOT_TOKEN_ID:  "myroot"

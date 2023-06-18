@@ -2,15 +2,17 @@ package main
 
 import (
 	"context"
-	"embed"
 	"errors"
-	"io/fs"
+	"flag"
+	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
 
+	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/pedrosantosbr/x5/cmd/internal"
 	"github.com/pedrosantosbr/x5/internal/envvar"
 
 	internaldomain "github.com/pedrosantosbr/x5/internal"
@@ -24,8 +26,22 @@ import (
 	"go.uber.org/zap"
 )
 
-// go:embed static
-var content embed.FS
+func main() {
+	var env, address string
+
+	flag.StringVar(&env, "env", "", "Environment Variables filename")
+	flag.StringVar(&address, "address", ":9234", "HTTP Server Address")
+	flag.Parse()
+
+	errC, err := run(env, address)
+	if err != nil {
+		log.Fatalf("Couldn't run: %s", err)
+	}
+
+	if err := <-errC; err != nil {
+		log.Fatalf("Error while running: %s", err)
+	}
+}
 
 func run(env, address string) (<-chan error, error) {
 	logger, err := zap.NewProduction()
@@ -48,19 +64,29 @@ func run(env, address string) (<-chan error, error) {
 		})
 	}
 
+	if err := envvar.Load(env); err != nil {
+		return nil, internaldomain.WrapErrorf(err, internaldomain.ErrorCodeUnknown, "envvar.Load")
+	}
+
+	vault, err := internal.NewVaultProvider()
+	if err != nil {
+		return nil, internaldomain.WrapErrorf(err, internaldomain.ErrorCodeUnknown, "internal.NewVaultProvider")
+	}
+
+	conf := envvar.New(vault)
+
+	pool, err := internal.NewPostgreSQL(conf)
+	if err != nil {
+		return nil, internaldomain.WrapErrorf(err, internaldomain.ErrorCodeUnknown, "internal.NewPostgreSQL")
+	}
+
 	//-
 
-	srv, err := newServer(serverConfig{
-		Address: address,
-		// DB:            pool,
-		// ElasticSearch: esClient,
-		// Metrics:       promExporter,
+	srv, err := newServer(ServerConfig{
+		Address:     address,
+		DB:          pool,
 		Middlewares: []func(next http.Handler) http.Handler{otelchi.Middleware("todo-api-server"), logging},
-		// Redis:         rdb,
-		Logger: logger,
-		// Memcached:     memcached,
-		// RabbitMQ:      rmq,
-		// Kafka:         kafka,
+		Logger:      logger,
 	})
 	if err != nil {
 		return nil, internaldomain.WrapErrorf(err, internaldomain.ErrorCodeUnknown, "newServer")
@@ -83,9 +109,7 @@ func run(env, address string) (<-chan error, error) {
 		defer func() {
 			_ = logger.Sync()
 
-			// pool.Close()
-			// rmq.Close()
-			// rdb.Close()
+			pool.Close()
 			stop()
 			cancel()
 			close(errC)
@@ -114,20 +138,15 @@ func run(env, address string) (<-chan error, error) {
 
 }
 
-type serverConfig struct {
-	Address string
-	// DB      *pgxpool.Pool
-	// ElasticSearch *esv7.Client
-	// Kafka         *internal.KafkaProducer
-	// RabbitMQ    *internal.RabbitMQ
-	// Redis       *rv8.Client
-	// Memcached   *memcache.Client
+type ServerConfig struct {
+	Address     string
+	DB          *pgxpool.Pool
 	Metrics     http.Handler
 	Middlewares []func(next http.Handler) http.Handler
 	Logger      *zap.Logger
 }
 
-func newServer(conf serverConfig) (*http.Server, error) {
+func newServer(conf ServerConfig) (*http.Server, error) {
 	router := chi.NewRouter()
 	router.Use(render.SetContentType(render.ContentTypeJSON))
 
@@ -136,8 +155,8 @@ func newServer(conf serverConfig) (*http.Server, error) {
 	}
 
 	// -
-	fsys, _ := fs.Sub(content, "static")
-	router.Handle("/static/*", http.StripPrefix("/static/", http.FileServer(http.FS(fsys))))
+	// fsys, _ := fs.Sub(content, "static")
+	// router.Handle("/static/*", http.StripPrefix("/static/", http.FileServer(http.FS(fsys))))
 
 	router.Handle("/metrics", conf.Metrics)
 

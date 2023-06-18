@@ -1,6 +1,10 @@
 package internal
 
-import validation "github.com/go-ozzo/ozzo-validation/v4"
+import (
+	"time"
+
+	validation "github.com/go-ozzo/ozzo-validation/v4"
+)
 
 type User struct {
 	ID          string `json:"id"`
@@ -9,6 +13,9 @@ type User struct {
 	FirstName   string `json:"firstName"`
 	LastName    string `json:"lastName"`
 	DateOfBirth string `json:"dateOfBirth"`
+
+	CreatedAt time.Time `json:"createdAt"`
+	UpdatedAt time.Time `json:"updatedAt"`
 }
 
 // Validate ...

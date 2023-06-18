@@ -7,4 +7,4 @@ VALUES (
   @email,
   @password
 )
-RETURNING id;
+RETURNING id, created_at, updated_at;

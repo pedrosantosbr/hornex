@@ -6,12 +6,16 @@ import (
 )
 
 type UserCreateParams struct {
-	Email    string
-	Password string
+	Email         string
+	Password      string
+	TermsAccepted bool
 }
 
 // Validate indicates whether the fields are valid or not.
 func (u UserCreateParams) Validate() error {
+	if !u.TermsAccepted {
+		return internal.WrapErrorf(nil, internal.ErrorCodeInvalidArgument, "terms not accepted")
+	}
 
 	user := internal.User{
 		Email:    u.Email,

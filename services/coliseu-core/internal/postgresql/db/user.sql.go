@@ -9,6 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const InsertUser = `-- name: InsertUser :one
@@ -20,7 +21,7 @@ VALUES (
   $1,
   $2
 )
-RETURNING id
+RETURNING id, created_at, updated_at
 `
 
 type InsertUserParams struct {
@@ -28,9 +29,15 @@ type InsertUserParams struct {
 	Password string
 }
 
-func (q *Queries) InsertUser(ctx context.Context, arg InsertUserParams) (uuid.UUID, error) {
+type InsertUserRow struct {
+	ID        uuid.UUID
+	CreatedAt pgtype.Timestamp
+	UpdatedAt pgtype.Timestamp
+}
+
+func (q *Queries) InsertUser(ctx context.Context, arg InsertUserParams) (InsertUserRow, error) {
 	row := q.db.QueryRow(ctx, InsertUser, arg.Email, arg.Password)
-	var id uuid.UUID
-	err := row.Scan(&id)
-	return id, err
+	var i InsertUserRow
+	err := row.Scan(&i.ID, &i.CreatedAt, &i.UpdatedAt)
+	return i, err
 }

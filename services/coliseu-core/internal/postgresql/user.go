@@ -24,8 +24,8 @@ func (u *User) Create(ctx context.Context, params services.UserCreateParams) (in
 	// XXX: `CreatedAt` is being created on the database side
 	// XXX: `UpdatedAt` is being created on the database side
 
-	newID, err := u.q.InsertUser(ctx, db.InsertUserParams{
-		Email: params.Email,
+	res, err := u.q.InsertUser(ctx, db.InsertUserParams{
+		Email:    params.Email,
 		Password: params.Password,
 	})
 	if err != nil {
@@ -33,8 +33,10 @@ func (u *User) Create(ctx context.Context, params services.UserCreateParams) (in
 	}
 
 	return internal.User{
-		ID: newID.String(),
-		Email: params.Email,
-		Password: params.Password,
+		ID:        res.ID.String(),
+		Email:     params.Email,
+		Password:  params.Password,
+		CreatedAt: res.CreatedAt.Time,
+		UpdatedAt: res.UpdatedAt.Time,
 	}, nil
 }

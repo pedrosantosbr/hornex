@@ -7,7 +7,7 @@ import (
 )
 
 type UserRepository interface {
-	Create(ctx context.Context, user *UserCreateParams) (internal.User, error)
+	Create(ctx context.Context, user UserCreateParams) (internal.User, error)
 }
 
 type PasswordHasher interface {
@@ -20,15 +20,7 @@ type User struct {
 	hasher PasswordHasher
 }
 
-// NewUser Service...
-func NewUser(repo UserRepository, hasher PasswordHasher) *User {
-	return &User{
-		repo:   repo,
-		hasher: hasher,
-	}
-}
-
-func Create(u *User, ctx context.Context, params *UserCreateParams) (internal.User, error) {
+func (u *User) Create(ctx context.Context, params UserCreateParams) (internal.User, error) {
 	if err := params.Validate(); err != nil {
 		return internal.User{}, err
 	}
@@ -46,4 +38,12 @@ func Create(u *User, ctx context.Context, params *UserCreateParams) (internal.Us
 	}
 
 	return user, nil
+}
+
+// NewUser Service...
+func NewUser(repo UserRepository, hasher PasswordHasher) *User {
+	return &User{
+		repo:   repo,
+		hasher: hasher,
+	}
 }

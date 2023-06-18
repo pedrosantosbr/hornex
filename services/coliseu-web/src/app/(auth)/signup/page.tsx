@@ -14,19 +14,13 @@ export default function SignInPage() {
         <form action="" className="mt-6 space-y-4 md:space-y-6">
           {/* Email */}
           <div>
-            <InputLabel title="Seu email" important />
+            <InputLabel title="Email" important />
             <Input placeholder="jonh.doe@example.com" />
           </div>
 
           {/* Password */}
           <div>
-            <InputLabel title="Sua senha" important />
-            <Input type="password" placeholder="****" />
-          </div>
-
-          {/* Password */}
-          <div>
-            <InputLabel title="Confirmar senha" important />
+            <InputLabel title="Senha" important />
             <Input type="password" placeholder="****" />
           </div>
 

@@ -14,6 +14,9 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/pedrosantosbr/x5/cmd/internal"
 	"github.com/pedrosantosbr/x5/internal/envvar"
+	"github.com/pedrosantosbr/x5/internal/postgresql"
+	"github.com/pedrosantosbr/x5/internal/rest"
+	"github.com/pedrosantosbr/x5/internal/services"
 
 	internaldomain "github.com/pedrosantosbr/x5/internal"
 
@@ -155,6 +158,13 @@ func newServer(conf ServerConfig) (*http.Server, error) {
 	}
 
 	// -
+
+	urepo := postgresql.NewUser(conf.DB)
+	hasher := internal.NewHasher()
+	usvc := services.NewUser(urepo, hasher)
+
+	rest.NewUserHandler(usvc).Register(router)
+
 	// fsys, _ := fs.Sub(content, "static")
 	// router.Handle("/static/*", http.StripPrefix("/static/", http.FileServer(http.FS(fsys))))
 

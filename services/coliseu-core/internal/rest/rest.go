@@ -2,12 +2,13 @@ package rest
 
 import (
 	"errors"
+	"fmt"
 	"net/http"
 
 	"github.com/pedrosantosbr/x5/internal"
 
 	"github.com/go-chi/render"
-	validation "github.com/go-ozzo/ozzo-validation"
+	validation "github.com/go-ozzo/ozzo-validation/v4"
 )
 
 // ErrorResponse represents a response containing an error message.
@@ -21,6 +22,7 @@ func renderErrorResponse(w http.ResponseWriter, r *http.Request, msg string, err
 	status := http.StatusInternalServerError
 
 	var ierr *internal.Error
+	fmt.Printf("Error: %T\n", err)
 	if !errors.As(err, &ierr) {
 		resp.Error = "internal error"
 	} else {
@@ -48,7 +50,7 @@ func renderErrorResponse(w http.ResponseWriter, r *http.Request, msg string, err
 	// 	span.RecordError(err)
 	// }
 
-	// XXX fmt.Printf("Error: %v\n", err)
+	fmt.Printf("Error: %v\n", err)
 
 	render.Status(r, status)
 	render.JSON(w, r, &resp)

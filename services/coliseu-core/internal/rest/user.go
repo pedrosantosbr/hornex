@@ -8,11 +8,11 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/pedrosantosbr/x5/internal"
-	services "github.com/pedrosantosbr/x5/internal/services/user"
+	"github.com/pedrosantosbr/x5/internal/services"
 )
 
 type UserService interface {
-	Create(ctx context.Context, params *services.UserCreateParams) (internal.User, error)
+	Create(ctx context.Context, params services.UserCreateParams) (internal.User, error)
 }
 
 type UserHandler struct {
@@ -26,7 +26,7 @@ func NewUserHandler(svc UserService) *UserHandler {
 
 // Register connects the handlers to the router
 func (h *UserHandler) Register(r *chi.Mux) {
-	r.Post("/api/v1/user/create", h.create)
+	r.Post("/api/v1/users/create", h.create)
 }
 
 type User struct {
@@ -34,7 +34,7 @@ type User struct {
 	Email     string    `json:"email"`
 	FirstName string    `json:"firstName"`
 	LastName  string    `json:"lastName"`
-	CreateAt  time.Time `json:"createAt"`
+	CreatedAt time.Time `json:"createdAt"`
 	UpdatedAt time.Time `json:"updatedAt"`
 }
 
@@ -61,12 +61,11 @@ func (h *UserHandler) create(w http.ResponseWriter, r *http.Request) {
 
 	defer r.Body.Close()
 
-	user, err := h.svc.Create(r.Context(), &services.UserCreateParams{
+	user, err := h.svc.Create(r.Context(), services.UserCreateParams{
 		Email:         req.Email,
 		Password:      req.Password,
 		TermsAccepted: req.TermsAccepted,
 	})
-
 	if err != nil {
 		renderErrorResponse(w, r, "create failed", err)
 		return
@@ -79,7 +78,7 @@ func (h *UserHandler) create(w http.ResponseWriter, r *http.Request) {
 				Email:     user.Email,
 				FirstName: user.FirstName,
 				LastName:  user.LastName,
-				CreateAt:  user.CreatedAt,
+				CreatedAt: user.CreatedAt,
 				UpdatedAt: user.UpdatedAt,
 			},
 		},

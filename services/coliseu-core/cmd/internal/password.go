@@ -1,12 +1,18 @@
-package password
+package internal
 
 import "golang.org/x/crypto/bcrypt"
 
-func Hash(password string) (string, error) {
+type Hasher struct{}
+
+func (h *Hasher) Hash(password string) (string, error) {
 	bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14)
 	return string(bytes), err
 }
 
-func Check(password, hash string) error {
+func (h *Hasher) Check(password, hash string) error {
 	return bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
+}
+
+func NewHasher() *Hasher {
+	return &Hasher{}
 }

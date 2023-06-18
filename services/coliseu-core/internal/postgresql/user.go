@@ -5,7 +5,7 @@ import (
 
 	"github.com/pedrosantosbr/x5/internal"
 	"github.com/pedrosantosbr/x5/internal/postgresql/db"
-	services "github.com/pedrosantosbr/x5/internal/services/user"
+	"github.com/pedrosantosbr/x5/internal/services"
 )
 
 // User is the User Repository
@@ -14,8 +14,8 @@ type User struct {
 }
 
 // NewUser instatiates the User Repository
-func NewUser(q *db.Queries) *User {
-	return &User{q: q}
+func NewUser(d db.DBTX) *User {
+	return &User{q: db.New(d)}
 }
 
 // Create inserts a new user record

@@ -12,20 +12,20 @@ type UserCreateParams struct {
 }
 
 // Validate indicates whether the fields are valid or not.
-func (u UserCreateParams) Validate() error {
-	if !u.TermsAccepted {
-		return internal.WrapErrorf(validation.Errors{
-			"termsAccepted": internal.NewErrorf(internal.ErrorCodeInvalidArgument, "terms must be accepted"),
-		}, internal.ErrorCodeInvalidArgument, "terms must be accepted")
-	}
-
+func (p UserCreateParams) Validate() error {
 	user := internal.User{
-		Email:    u.Email,
-		Password: u.Password,
+		Email:    p.Email,
+		Password: p.Password,
 	}
 
 	if err := validation.Validate(&user); err != nil {
 		return internal.WrapErrorf(err, internal.ErrorCodeInvalidArgument, "validation.Validate")
+	}
+
+	if !p.TermsAccepted {
+		return validation.Errors{
+			"termsAccepted": internal.NewErrorf(internal.ErrorCodeInvalidArgument, "Terms and conditions not accepted"),
+		}
 	}
 
 	return nil

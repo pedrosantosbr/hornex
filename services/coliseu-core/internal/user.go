@@ -25,7 +25,7 @@ func (user User) Validate() error {
 		validation.Field(&user.Password, validation.Required),
 		validation.Field(&user.FirstName),
 		validation.Field(&user.LastName),
-		validation.Field(&user.DateOfBirth, validation.Required),
+		validation.Field(&user.DateOfBirth),
 	); err != nil {
 		return WrapErrorf(err, ErrorCodeInvalidArgument, "invalid values")
 	}

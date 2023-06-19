@@ -22,7 +22,7 @@ type User struct {
 
 func (u *User) Create(ctx context.Context, params UserCreateParams) (internal.User, error) {
 	if err := params.Validate(); err != nil {
-		return internal.User{}, err
+		return internal.User{}, internal.WrapErrorf(err, internal.ErrorCodeInvalidArgument, "params.Validate")
 	}
 
 	hashedPassword, err := u.hasher.Hash(params.Password)

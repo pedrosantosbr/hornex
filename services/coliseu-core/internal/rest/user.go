@@ -26,7 +26,7 @@ func NewUserHandler(svc UserService) *UserHandler {
 
 // Register connects the handlers to the router
 func (h *UserHandler) Register(r *chi.Mux) {
-	r.Post("/api/v1/users/create", h.create)
+	r.Post("/api/users", h.create)
 }
 
 type User struct {

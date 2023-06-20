@@ -9,9 +9,9 @@ export type GameListProps = {
 
 export const GameList = ({ games }: GameListProps) => {
   return (
-    <div className="flex">
+    <div className="flex gap-10">
       {games.map((game) => (
-        <Link href={`/play?game=${game.slug}`} key={game.id}>
+        <Link href={`/${game.slug}`} key={game.id}>
           <GameListItem key={game.id} game={game} />
         </Link>
       ))}

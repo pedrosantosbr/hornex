@@ -1,0 +1,11 @@
+.cell {
+  @apply p-3;
+}
+
+.th {
+  @apply cell text-[11px] font-bold tracking-tighter text-gray-200;
+}
+
+.td {
+  @apply cell border-b border-gray-800;
+}

@@ -1,4 +1,4 @@
-export function ArrorLongLeftIcon(props: React.SVGAttributes<{}>) {
+export function ArrowLongLeftIcon(props: React.SVGAttributes<{}>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

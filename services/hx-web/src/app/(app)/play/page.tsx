@@ -2,7 +2,7 @@
 import Button from "@/components/ui/button/button";
 import InputLabel from "@/components/ui/form/input-label";
 import Input from "@/components/ui/form/input";
-import { ArrorLongLeftIcon } from "@/components/ui/icons/arrow-long-left-icon";
+import { ArrowLongLeftIcon } from "@/components/ui/icons/arrow-long-left-icon";
 import Link from "next/link";
 import UserSearchList from "@/components/users/user-search-list";
 import BetPicker from "@/components/games/bet-picker";
@@ -40,7 +40,7 @@ export default function PlayPage({ gameSlug }: PlayPageProps) {
       <Link href="/">
         {" "}
         <div className="flex text-gray-300 hover:text-white">
-          <ArrorLongLeftIcon className="mr-2 w-5" />
+          <ArrowLongLeftIcon className="mr-2 w-5" />
           <span className="text-sm font-medium tracking-tight">Voltar</span>
         </div>
       </Link>

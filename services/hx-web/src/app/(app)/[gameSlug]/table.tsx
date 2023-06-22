@@ -3,7 +3,7 @@ import styles from "./table.module.scss";
 
 export const THead = ({ children }: { children: React.ReactNode }) => {
   return (
-    <thead className="border-b border-gray-800 text-xs font-bold uppercase tracking-tighter">
+    <thead className="border-b border-gray-700 text-xs font-bold uppercase tracking-tighter">
       {children}
     </thead>
   );

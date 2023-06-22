@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Head from "./navbar";
+import classnames from "classnames";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={classnames(inter.className, "bg-slate-900 text-slate-400")}
+      >
+        {children}
+      </body>
     </html>
   );
 }

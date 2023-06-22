@@ -11,6 +11,9 @@ module.exports = {
       body: ['Inter', 'system-ui', 'sans-serif'],
     },
     extend: {
+      boxShadow: { 
+        'card': 'inset 0 1px 0 0 #ffffff0d'
+      },
       backgroundImage: {
         hero: "url('/league-art.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

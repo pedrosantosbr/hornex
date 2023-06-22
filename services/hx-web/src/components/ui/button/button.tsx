@@ -45,7 +45,12 @@ const colors: Record<ColorNames, string[]> = {
     "border-green-500",
     "bg-gradient-to-b from-green-500 to-green-700",
   ],
-  info: ["text-blue-500", "bg-blue-500", "border-blue-500"],
+  info: [
+    "text-sky-500",
+    "bg-sky-500",
+    "border-sky-500",
+    "shadow-highlight-200",
+  ],
   warning: ["text-yellow-500", "bg-yellow-500", "border-yellow-500"],
   danger: [
     "text-red-500",
@@ -134,7 +139,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         break;
 
       default:
-        buttonColorClassNames = `border ${colorClassNames[1]} ${colorClassNames[2]}`;
+        // TODO: add border class
+        buttonColorClassNames = `${colorClassNames[1]} ${colorClassNames[2]}`;
         buttonDripColor = "rgba(255, 255, 255, 0.3)";
         break;
     }

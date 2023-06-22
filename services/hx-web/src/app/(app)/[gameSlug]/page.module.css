@@ -1,7 +1,0 @@
-.th {
-  @apply px-6 py-3 text-left text-xs font-bold tracking-tighter text-gray-300;
-}
-
-.td {
-  @apply px-6 py-3;
-}

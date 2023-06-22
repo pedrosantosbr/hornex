@@ -48,11 +48,17 @@ export const TData = ({
 export const TRow = ({
   children,
   className,
+  onClick,
 }: {
   children: React.ReactNode;
   className?: string;
+  onClick: () => void;
 }) => {
-  return <tr className={classnames(styles.tr, className)}>{children}</tr>;
+  return (
+    <tr onClick={() => onClick()} className={classnames(styles.tr, className)}>
+      {children}
+    </tr>
+  );
 };
 
 const Table = ({ children }: { children: React.ReactNode }) => {

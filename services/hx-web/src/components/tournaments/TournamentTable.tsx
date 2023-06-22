@@ -1,9 +1,9 @@
 import Image from "next/image";
 import classnames from "classnames";
+import { useRouter } from "next/navigation";
 
 import LeagueOfLegendsThumb from "@/assets/images/games/league-of-legends.jpg";
 import Table from "../ui/table";
-import { LinkButton } from "../ui/LinkButton";
 
 export type TournamentTableProps = {
   children: React.ReactNode;
@@ -11,6 +11,8 @@ export type TournamentTableProps = {
 };
 
 export const TournamentTable = () => {
+  const router = useRouter();
+
   return (
     <div className="flex flex-col">
       <span className="mb-1 text-xs text-slate-400">
@@ -28,7 +30,10 @@ export const TournamentTable = () => {
           </Table.THead>
           <tbody>
             {Array.from({ length: 5 }).map((_, index) => (
-              <Table.TRow className="transition-all hover:cursor-pointer hover:bg-slate-700/40">
+              <Table.TRow
+                onClick={() => router.push("/tournaments/1")}
+                className="transition-all hover:cursor-pointer hover:bg-slate-700/40"
+              >
                 <Table.TData colSpan={6}>
                   <div className="flex items-center">
                     <div className="rounded border border-gray-700 shadow-highlight-200">
@@ -75,9 +80,7 @@ export const TournamentTable = () => {
                   </span>
                 </Table.TData>
                 <Table.TData>
-                  <span className="text-sm font-semibold text-slate-400">
-                    10 days
-                  </span>
+                  <span className="text-sm text-slate-400">10 days</span>
                 </Table.TData>
 
                 {/* <Table.TData>
@@ -87,7 +90,6 @@ export const TournamentTable = () => {
             ))}
           </tbody>
         </Table>
-        <div className="rounded-b-lg border-t border-slate-700/40 py-4 dark:bg-slate-800"></div>
       </div>
     </div>
   );

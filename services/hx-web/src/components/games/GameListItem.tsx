@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 export const GameListItem = ({ game }: { game: Game }) => {
   return (
-    <div className="hover:shadow-xs hover:rin-1 flex w-[300px] flex-col rounded-lg from-gray-950 to-slate-800 p-3 text-xs transition-all hover:scale-105 hover:cursor-pointer  hover:bg-gradient-to-br  hover:shadow-slate-950 hover:ring-gray-800">
+    <div className="hover:shadow-xs hover:rin-1 flex w-[300px] flex-col rounded-lg from-gray-950 to-slate-800 p-3 text-xs transition-all hover:scale-105 hover:cursor-pointer hover:bg-slate-800 hover:shadow-highlight">
       <Image
         className="h-[150px] w-full rounded-lg"
         alt={game.name}

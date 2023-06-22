@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const { fontSize } = require('./src/app/theme/fontStyles')
+const { fontSize } = require("./src/app/theme/fontStyles");
 
 module.exports = {
   content: [
@@ -10,13 +10,20 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: ['Inter', 'system-ui', 'sans-serif'],
-      body: ['Inter', 'system-ui', 'sans-serif'],
+      sans: [
+        "Inter var, sans-serif",
+        {
+          fontFeatureSettings: '"cv11", "ss01"',
+          fontVariationSettings: '"opsz" 32',
+        },
+      ],
     },
     fontSize,
     extend: {
-      boxShadow: { 
-        'card': 'inset 0 1px 0 0 #ffffff0d'
+      boxShadow: {
+        "highlight-all": "inset 0 0 0 1px #ffffff1a",
+        "highlight-100": "inset 0 1px 0 0 #ffffff0d",
+        "highlight-200": "inset 0 1px 0 0 #fff3",
       },
       backgroundImage: {
         hero: "url('/league-art.png')",

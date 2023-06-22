@@ -1,5 +1,5 @@
 "use client";
-import { TournamentTable } from "@/components/tournaments/tournament-table";
+import { TournamentTable } from "@/components/tournaments/TournamentTable";
 import { ArrowLongLeftIcon } from "@/components/ui/icons/arrow-long-left-icon";
 import Link from "next/link";
 

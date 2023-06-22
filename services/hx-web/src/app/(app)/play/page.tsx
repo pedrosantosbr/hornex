@@ -61,7 +61,7 @@ export default function PlayPage({ gameSlug }: PlayPageProps) {
         <form action="" className="space-y-4 md:space-y-6">
           <div>
             {/* Game */}
-            <div className="shadow-card hover:shadow-large xs:p-6 xs:pb-8 mb-6 rounded-lg border border-gray-700 bg-gray-800 p-5 transition-shadow duration-200">
+            <div className="hover:shadow-large xs:p-6 xs:pb-8 shadow-card mb-6 rounded-lg border border-gray-700 bg-gray-800 p-5 transition-shadow duration-200">
               <InputLabel title="Jogo" important />
               <p className="mb-5 text-sm leading-[1.8] dark:text-gray-300">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,

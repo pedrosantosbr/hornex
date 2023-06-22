@@ -3,7 +3,7 @@ import styles from "./table.module.scss";
 
 export const THead = ({ children }: { children: React.ReactNode }) => {
   return (
-    <thead className="border-b border-gray-700 text-xs font-bold uppercase tracking-tighter">
+    <thead className="border-b border-slate-700/40 text-xs font-bold uppercase tracking-tighter">
       {children}
     </thead>
   );
@@ -12,21 +12,37 @@ export const THead = ({ children }: { children: React.ReactNode }) => {
 export const THeader = ({
   children,
   className,
+  colsPan = 1,
 }: {
   children: React.ReactNode;
   className?: string;
+  colsPan?: number;
 }) => {
-  return <th className={classnames(styles.th, className)}>{children}</th>;
+  return (
+    <th
+      scope="col"
+      colSpan={colsPan}
+      className={classnames(styles.th, className)}
+    >
+      {children}
+    </th>
+  );
 };
 
 export const TData = ({
   children,
   className,
+  colSpan = 1,
 }: {
   children: React.ReactNode;
   className?: string;
+  colSpan?: number;
 }) => {
-  return <td className={classnames(styles.td, className)}>{children}</td>;
+  return (
+    <td colSpan={colSpan} className={classnames(styles.td, className)}>
+      {children}
+    </td>
+  );
 };
 
 export const TRow = ({
@@ -44,7 +60,7 @@ const Table = ({ children }: { children: React.ReactNode }) => {
     <table
       className={classnames(
         styles.table,
-        "dark:highlight-white/5 w-full table-auto rounded-lg bg-white shadow-card ring-1 ring-slate-900/5 dark:bg-slate-800 dark:ring-0"
+        "w-full table-fixed rounded-lg bg-white shadow-highlight-100 ring-1 ring-slate-900/5 dark:bg-slate-800 dark:ring-0"
       )}
     >
       {children}

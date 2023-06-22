@@ -1,5 +1,5 @@
 import { Game } from "@/types/game";
-import { GameListItem } from "./game-list-item";
+import { GameListItem } from "./GameListItem";
 import { useRouter } from "next/router";
 import Link from "next/link";
 

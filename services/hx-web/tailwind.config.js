@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontSize } = require('./src/app/theme/fontStyles')
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,6 +13,7 @@ module.exports = {
       display: ['Inter', 'system-ui', 'sans-serif'],
       body: ['Inter', 'system-ui', 'sans-serif'],
     },
+    fontSize,
     extend: {
       boxShadow: { 
         'card': 'inset 0 1px 0 0 #ffffff0d'

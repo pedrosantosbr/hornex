@@ -1,6 +1,6 @@
 import { useState, useRef, forwardRef, useImperativeHandle } from "react";
 import cn from "classnames";
-import { LoaderSizeTypes, LoaderVariantTypes } from "@/components/ui/loader";
+import { LoaderSizeTypes, LoaderVariantTypes } from "@/components/ui/Loader";
 import ButtonLoader from "./button-loader";
 import ButtonDrip from "./button-drip";
 type ShapeNames = "rounded" | "pill" | "circle";

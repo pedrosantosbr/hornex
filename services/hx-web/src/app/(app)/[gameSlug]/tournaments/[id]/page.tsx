@@ -3,6 +3,7 @@ import classnames from "classnames";
 import Button from "@/components/ui/button/button";
 import { ArrowLongLeftIcon } from "@/components/ui/icons/arrow-long-left-icon";
 import Link from "next/link";
+import TournamentTab from "@/components/tournaments/TournamentTab";
 
 type TournamentProps = {
   params: {
@@ -12,7 +13,7 @@ type TournamentProps = {
 
 export default function Tournament({ params }: TournamentProps) {
   return (
-    <main className="px-auto h-[100vh] space-y-10 pt-6">
+    <main className="px-auto pt-6">
       <div className="mx-auto px-6 lg:px-8">
         {/* Page title */}
         <Link href="/">
@@ -39,9 +40,19 @@ export default function Tournament({ params }: TournamentProps) {
           </span>
         </div>
 
-        <div className="grid grid-cols-12 gap-3 py-4">
+        {/* Main */}
+        <div className="grid grid-cols-12 gap-6 py-4">
+          <div className="col-span-9">
+            <div className="flex flex-col pr-6">
+              <h2 className="text-lg font-bold tracking-tighter text-white">
+                Tournament Information
+              </h2>
+              <TournamentTab />
+            </div>
+          </div>
+          {/* Sidebar */}
           <div className="col-span-3">
-            <div className="flex flex-col rounded-lg bg-slate-800 p-6 shadow-highlight-200">
+            <div className="flex flex-col  px-6">
               <h2 className="text-lg font-bold tracking-tighter text-white">
                 Tournament Phases
               </h2>
@@ -49,7 +60,7 @@ export default function Tournament({ params }: TournamentProps) {
               <div className="mb-10 px-4 pt-8">
                 <ol className="relative border-l border-gray-200 text-gray-500 dark:border-gray-700 dark:text-gray-400">
                   <li className="mb-10 ml-6">
-                    <span className="absolute -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-green-200 ring-4 ring-white dark:bg-green-900 dark:ring-gray-600">
+                    <span className="absolute -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-green-200 ring-4 ring-white dark:bg-green-900 dark:ring-green-600">
                       <svg
                         aria-hidden="true"
                         className="h-5 w-5 text-green-500 dark:text-green-400"
@@ -149,8 +160,8 @@ export default function Tournament({ params }: TournamentProps) {
               <div className="flex w-full flex-col py-4">
                 <div className="mb-2 flex justify-between">
                   <span className="text-xs text-gray-400">8/12</span>
-                  <span className="text-xs font-bold uppercase text-green-400">
-                    full
+                  <span className="text-xs font-bold uppercase italic text-green-400">
+                    Open
                   </span>
                 </div>
                 <div className="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
@@ -162,13 +173,11 @@ export default function Tournament({ params }: TournamentProps) {
                   ></div>
                 </div>
                 <Button className="mt-4 w-full" shape="rounded" color="info">
-                  Join
+                  Join for <span className="font-bold">R$ 40,00</span>
                 </Button>
               </div>
             </div>
           </div>
-
-          <div className="col-span-9"></div>
         </div>
       </div>
     </main>

@@ -24,8 +24,8 @@ export const TournamentTable = () => {
           <Table.THead>
             <tr>
               <Table.THeader colsPan={3}>Tournament</Table.THeader>
+              <Table.THeader>Teams</Table.THeader>
               <Table.THeader>Price pool</Table.THeader>
-              <Table.THeader colsPan={1}>Phase</Table.THeader>
               <Table.THeader>Starting in</Table.THeader>
             </tr>
           </Table.THead>
@@ -34,7 +34,7 @@ export const TournamentTable = () => {
               <Table.TRow
                 key={index}
                 onClick={() => router.push("/league-of-legends/tournaments/1")}
-                className="transition-all hover:cursor-pointer hover:bg-slate-700/40 group/item "
+                className="group/item transition-all hover:cursor-pointer hover:bg-slate-700/40 "
               >
                 <Table.TData colSpan={3}>
                   <div className="flex items-center">
@@ -51,18 +51,17 @@ export const TournamentTable = () => {
                       <h4 className="text-xs font-bold text-gray-200">
                         TVXU#0002
                       </h4>
-                      <span className="text-xs text-gray-400">Ranked</span>
+                      <span className="text-xs text-gray-400">
+                        League of Legends
+                      </span>
+                      <span className="text-xs text-gray-400">
+                        12 Jun 2023 18:00 (GMT-3)
+                      </span>
                     </div>
                   </div>
                 </Table.TData>
 
                 <Table.TData>
-                  <span className="text-sm font-bold tracking-tighter text-green-500">
-                    R$ 1.500,00
-                  </span>
-                </Table.TData>
-
-                <Table.TData colSpan={1}>
                   <div className="flex flex-col">
                     <div className="mb-2 flex justify-between">
                       <span className="text-xs text-green-400">8/12</span>
@@ -80,9 +79,17 @@ export const TournamentTable = () => {
                     </div>
                   </div>
                 </Table.TData>
+
+                <Table.TData>
+                  <span className="text-sm font-bold tracking-tighter text-white">
+                    R$ 1.500,00
+                  </span>
+                </Table.TData>
+
                 <Table.TData>
                   <span className="text-xs text-slate-400">10 days</span>
                 </Table.TData>
+
                 <Table.TData className="relative overflow-hidden">
                   <div className="flex items-center">
                     <EyeIcon className="mr-2 w-4" />
@@ -91,7 +98,7 @@ export const TournamentTable = () => {
                     </span>
                     <div
                       className={classnames(
-                        "absolute inset-x-[200px] top-0 flex h-full w-full items-center justify-center rounded-bl-lg bg-green-500 transition-all group-hover/item:inset-x-0"
+                        "absolute inset-x-[100rem] top-0 flex h-full w-full items-center justify-center  bg-sky-500 transition-all group-hover/item:inset-x-0"
                       )}
                     >
                       <span className="font-semibold italic text-white">

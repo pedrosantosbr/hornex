@@ -18,7 +18,7 @@ type GamePageProps = {
 
 export default function GamePage({ params }: GamePageProps) {
   return (
-    <main className="px-auto min-h-[calc(100vh-53px)] space-y-10 pt-6">
+    <main className="px-auto space-y-10 pt-6">
       <div className="mx-auto px-8">
         {/* Page title */}
         <Link href="/">
@@ -29,10 +29,10 @@ export default function GamePage({ params }: GamePageProps) {
           </div>
         </Link>
         <h1 className="text-left text-xl font-bold tracking-tighter text-white md:text-2xl">
-          League of Legends
+          Tournaments
         </h1>
       </div>
-      <div className="mx-auto px-8">
+      {/* <div className="mx-auto px-8">
         <h1 className="mb-5 text-left text-sm font-bold tracking-tighter text-gray-200 md:text-xl">
           How to play?
         </h1>
@@ -101,7 +101,7 @@ export default function GamePage({ params }: GamePageProps) {
             </span>
           </li>
         </ol>
-      </div>
+      </div> */}
       <div className="mx-auto lg:px-8">
         {/* table */}
         <div className="flex rounded text-left">

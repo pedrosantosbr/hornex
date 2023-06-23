@@ -88,7 +88,6 @@ func (h *TeamHandler) create(w http.ResponseWriter, r *http.Request) {
 			Team: Team{
 				ID:      team.ID,
 				OwnerID: team.OwnerID,
-				GameID:  team.GameID,
 			},
 		},
 		http.StatusCreated)

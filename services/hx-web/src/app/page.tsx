@@ -1,5 +1,5 @@
 "use client";
-import { GameList } from "@/components/games/game-list";
+import { GameList } from "@/components/games/GameList";
 import { Team } from "@/types/team";
 import LeagueOfLegendsThumb from "@/assets/images/games/league-of-legends.jpg";
 import CsGo from "@/assets/images/games/cs-go.jpg";

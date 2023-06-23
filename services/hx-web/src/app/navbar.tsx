@@ -19,8 +19,8 @@ const HeaderRightArea: FC = () => {
 
 export default function Navbar() {
   return (
-    <nav className="w-full py-2">
-      <div className="container mx-auto flex items-center justify-end py-2">
+    <nav className="w-full border-b border-slate-700 bg-slate-800 py-2">
+      <div className="mx-auto flex items-center justify-end px-6 py-2 lg:px-8">
         <HeaderRightArea />
       </div>
     </nav>

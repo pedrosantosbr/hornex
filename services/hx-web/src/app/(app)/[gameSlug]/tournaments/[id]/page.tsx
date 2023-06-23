@@ -13,7 +13,7 @@ type TournamentProps = {
 export default function Tournament({ params }: TournamentProps) {
   return (
     <main className="px-auto h-[100vh] space-y-10 pt-6">
-      <div className="mx-auto md:container">
+      <div className="mx-auto px-6 lg:px-8">
         {/* Page title */}
         <Link href="/">
           {" "}
@@ -64,10 +64,12 @@ export default function Tournament({ params }: TournamentProps) {
                         ></path>
                       </svg>
                     </span>
-                    <h3 className="text-sm font-medium leading-tight">
-                      Personal Info
-                    </h3>
-                    <p className="text-xs">Step details here</p>
+                    <div className="pl-4">
+                      <h3 className="text-sm font-medium leading-tight">
+                        Regitration Open
+                      </h3>
+                      <p className="text-xs">Step for teams get enrolled</p>
+                    </div>
                   </li>
                   <li className="mb-10 ml-6">
                     <span className="absolute -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 ring-4 ring-white dark:bg-gray-700 dark:ring-gray-600">
@@ -85,10 +87,14 @@ export default function Tournament({ params }: TournamentProps) {
                         ></path>
                       </svg>
                     </span>
-                    <h3 className="text-sm font-medium leading-tight">
-                      Account Info
-                    </h3>
-                    <p className="text-xs">Step details here</p>
+                    <div className="pl-4">
+                      <h3 className="text-sm font-medium leading-tight">
+                        Results tracking
+                      </h3>
+                      <p className="text-xs">
+                        In this step we track the matches results
+                      </p>
+                    </div>
                   </li>
                   <li className="mb-10 ml-6">
                     <span className="absolute -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 ring-4 ring-white dark:bg-gray-700 dark:ring-gray-600">
@@ -107,10 +113,12 @@ export default function Tournament({ params }: TournamentProps) {
                         ></path>
                       </svg>
                     </span>
-                    <h3 className="text-sm font-medium leading-tight">
-                      Review
-                    </h3>
-                    <p className="text-xs">Step details here</p>
+                    <div className="pl-4">
+                      <h3 className="text-sm font-medium leading-tight">
+                        Review
+                      </h3>
+                      <p className="text-xs">Step details here</p>
+                    </div>
                   </li>
                   <li className="ml-6">
                     <span className="absolute -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 ring-4 ring-white dark:bg-gray-700 dark:ring-gray-600">
@@ -129,10 +137,12 @@ export default function Tournament({ params }: TournamentProps) {
                         ></path>
                       </svg>
                     </span>
-                    <h3 className="text-sm font-medium leading-tight">
-                      Confirmation
-                    </h3>
-                    <p className="text-xs">Step details here</p>
+                    <div className="pl-4">
+                      <h3 className="text-sm font-medium leading-tight">
+                        Confirmation
+                      </h3>
+                      <p className="text-xs">Step details here</p>
+                    </div>
                   </li>
                 </ol>
               </div>
@@ -157,6 +167,8 @@ export default function Tournament({ params }: TournamentProps) {
               </div>
             </div>
           </div>
+
+          <div className="col-span-9"></div>
         </div>
       </div>
     </main>

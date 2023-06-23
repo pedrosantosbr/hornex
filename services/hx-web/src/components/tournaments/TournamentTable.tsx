@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 
 import LeagueOfLegendsThumb from "@/assets/images/games/league-of-legends.jpg";
 import Table from "../ui/table";
+import { LinkButton } from "../ui/LinkButton";
 
 export type TournamentTableProps = {
   children: React.ReactNode;
@@ -31,7 +32,7 @@ export const TournamentTable = () => {
           <tbody>
             {Array.from({ length: 5 }).map((_, index) => (
               <Table.TRow
-                onClick={() => router.push("/tournaments/1")}
+                onClick={() => router.push("/league-of-legends/tournaments/1")}
                 className="transition-all hover:cursor-pointer hover:bg-slate-700/40"
               >
                 <Table.TData colSpan={6}>
@@ -82,10 +83,6 @@ export const TournamentTable = () => {
                 <Table.TData>
                   <span className="text-sm text-slate-400">10 days</span>
                 </Table.TData>
-
-                {/* <Table.TData>
-                <LinkButton href="#">Join</LinkButton>
-              </Table.TData> */}
               </Table.TRow>
             ))}
           </tbody>

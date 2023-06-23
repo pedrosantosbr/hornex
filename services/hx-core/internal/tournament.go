@@ -17,7 +17,7 @@ type Tournament struct {
 	Code      string    `json:"code"`
 	Teams     []Team    `json:"teams"`
 	StartDate time.Time `json:"startDate"`
-	EndDate   time.Time `json:"endDate"`
+	CreatedAt time.Time `json:"createdAt"`
 	PricePool uint      `json:"pricePool"`
 	Phase     Phase     `json:"phase"`
 }

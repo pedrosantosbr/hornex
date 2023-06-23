@@ -5,7 +5,7 @@ import Input from "@/components/ui/form/input";
 import { ArrowLongLeftIcon } from "@/components/ui/icons/arrow-long-left-icon";
 import Link from "next/link";
 import UserSearchList from "@/components/users/user-search-list";
-import BetPicker from "@/components/games/bet-picker";
+import BetPicker from "@/components/games/BetPicker";
 import { Listbox, Transition } from "@headlessui/react";
 import { ChevronDown } from "@/components/ui/icons/chevron-down";
 import { useState } from "react";

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { GameList } from "@/components/games/game-list";
+import { GameList } from "@/components/games/GameList";
 import { Team } from "@/types/team";
 import LeagueOfLegends from "@/assets/images/league-of-legends-icon.png";
 import CsGo from "@/assets/images/cs-go-icon.png";

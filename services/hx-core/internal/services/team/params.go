@@ -18,7 +18,6 @@ func (c TeamCreateParams) Validate() error {
 	team := internal.Team{
 		Name:    c.Name,
 		OwnerID: c.OwnerID,
-		GameID:  c.GameID,
 	}
 
 	if err := validation.Validate(&team); err != nil {

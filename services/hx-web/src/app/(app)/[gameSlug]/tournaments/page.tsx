@@ -1,4 +1,5 @@
 "use client";
+import classnames from "classnames";
 import { TournamentTable } from "@/components/tournaments/TournamentTable";
 import { LinkButton } from "@/components/ui/LinkButton";
 import Button from "@/components/ui/button/button";
@@ -8,7 +9,12 @@ import Link from "next/link";
 import Teemo from "@/assets/images/teemo.png";
 import Gnar from "@/assets/images/gnar.png";
 import Lulu from "@/assets/images/lulu.png";
+import LolThumb from "@/assets/images/league-of-legends-thumb.png";
 import Image from "next/image";
+import {
+  ArrowLongRightIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/20/solid";
 
 type GamePageProps = {
   params: {
@@ -103,9 +109,72 @@ export default function GamePage({ params }: GamePageProps) {
         </ol>
       </div> */}
       <div className="mx-auto lg:px-8">
-        {/* table */}
-        <div className="flex rounded text-left">
-          <TournamentTable />
+        <div className="">
+          <ul className="grid grid-cols-1 gap-6 lg:grid-cols-4 lg:gap-8">
+            {new Array(4).fill(null).map((_, i) => (
+              <li className="divide-y divide-slate-700 rounded-lg bg-slate-800 shadow-highlight-200 ">
+                <figure>
+                  <Image
+                    alt="league of legends thumb"
+                    src={LolThumb}
+                    className="w-full rounded-t-lg"
+                  />
+                </figure>
+                <div className="p-6">
+                  <h4 className="text-sm font-semibold tracking-tighter text-white">
+                    AVDU#0001
+                  </h4>
+                  <div className="flex flex-wrap">
+                    <span className="mr-2 rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-slate-400">
+                      Featured
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6 pt-4">
+                  <div className="flex flex-col">
+                    <div className="mb-2 flex justify-between">
+                      <span className="text-xs text-green-400">8/12</span>
+                      <span className="text-xs font-bold uppercase italic text-green-400">
+                        open
+                      </span>
+                    </div>
+                    <div className="h-1.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+                      <div
+                        className={classnames(
+                          "h-1.5 rounded-full bg-green-600",
+                          "w-[70%]"
+                        )}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="">
+                  <div className="grid grid-cols-2 text-center ">
+                    <div className="flex flex-col items-center justify-center border-r border-dashed border-gray-600 ">
+                      <div className="flex items-center">
+                        <CurrencyDollarIcon className="mr-1 h-4 w-4 text-green-400" />
+                        <span className="text-semibold text-sm text-white">
+                          BRL 1.500,00
+                        </span>
+                      </div>
+                      <span className="text-xs">Prize Pool</span>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <Link
+                        href="/tournaments/1"
+                        className="flex h-full w-full items-center justify-center rounded-br-lg p-4 hover:bg-sky-500"
+                      >
+                        <span className="text-semibold text-sm text-white">
+                          Join
+                        </span>
+                        <ArrowLongRightIcon className="ml-1 h-4 w-4 text-white" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </main>

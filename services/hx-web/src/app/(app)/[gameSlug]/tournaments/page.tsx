@@ -13,7 +13,11 @@ import LolThumb from "@/assets/images/league-of-legends-thumb.png";
 import Image from "next/image";
 import {
   ArrowLongRightIcon,
+  Bars2Icon,
   CurrencyDollarIcon,
+  MapPinIcon,
+  TrophyIcon,
+  UsersIcon,
 } from "@heroicons/react/20/solid";
 
 type GamePageProps = {
@@ -31,7 +35,7 @@ export default function GamePage({ params }: GamePageProps) {
           {" "}
           <div className="flex text-gray-300 hover:text-white">
             <ArrowLongLeftIcon className="mr-2 w-5" />
-            <span className="text-sm font-medium tracking-tight">Voltar</span>
+            <span className="text-sm font-medium tracking-tight">Back</span>
           </div>
         </Link>
         <h1 className="text-left text-xl font-bold tracking-tighter text-white md:text-2xl">
@@ -112,7 +116,7 @@ export default function GamePage({ params }: GamePageProps) {
         <div className="">
           <ul className="grid grid-cols-1 gap-6 lg:grid-cols-4 lg:gap-8">
             {new Array(4).fill(null).map((_, i) => (
-              <li className="divide-y divide-slate-700 rounded-lg bg-slate-800 shadow-highlight-200 ">
+              <li className="divide-y divide-slate-700 rounded-lg bg-slate-800 shadow-highlight-all">
                 <figure>
                   <Image
                     alt="league of legends thumb"
@@ -120,20 +124,26 @@ export default function GamePage({ params }: GamePageProps) {
                     className="w-full rounded-t-lg"
                   />
                 </figure>
-                <div className="p-6">
-                  <h4 className="text-sm font-semibold tracking-tighter text-white">
+                <div className="p-4">
+                  <h4 className="mb-2 text-sm font-semibold tracking-tighter text-white">
                     AVDU#0001
                   </h4>
-                  <div className="flex flex-wrap">
-                    <span className="mr-2 rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-slate-400">
-                      Featured
-                    </span>
-                  </div>
+                  <ul className="flex flex-wrap">
+                    <li className="mr-2 flex rounded-full bg-slate-700 px-2 py-1 text-xs font-medium text-slate-400 shadow-highlight-100">
+                      <MapPinIcon className="mr-1 w-3" />
+                      Brazil
+                    </li>
+
+                    <li className="flex rounded-full bg-yellow-600/50 px-2 py-1 text-xs font-medium text-yellow-400 ring-1 ring-yellow-500">
+                      <TrophyIcon className="mr-1 w-3" />
+                      Free Elo
+                    </li>
+                  </ul>
                 </div>
-                <div className="p-6 pt-4">
+                <div className="p-4">
                   <div className="flex flex-col">
                     <div className="mb-2 flex justify-between">
-                      <span className="text-xs text-green-400">8/12</span>
+                      <span className="text-xs text-green-400">4/16</span>
                       <span className="text-xs font-bold uppercase italic text-green-400">
                         open
                       </span>

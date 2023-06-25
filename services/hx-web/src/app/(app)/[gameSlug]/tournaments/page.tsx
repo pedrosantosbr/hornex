@@ -1,14 +1,8 @@
 "use client";
 import classnames from "classnames";
-import { TournamentTable } from "@/components/tournaments/TournamentTable";
-import { LinkButton } from "@/components/ui/LinkButton";
-import Button from "@/components/ui/button/button";
 import { ArrowLongLeftIcon } from "@/components/ui/icons/arrow-long-left-icon";
 import Link from "next/link";
 
-import Teemo from "@/assets/images/teemo.png";
-import Gnar from "@/assets/images/gnar.png";
-import Lulu from "@/assets/images/lulu.png";
 import LolThumb from "@/assets/images/league-of-legends-thumb.png";
 import Image from "next/image";
 import {
@@ -171,7 +165,7 @@ export default function GamePage({ params }: GamePageProps) {
                     </div>
                     <div className="flex items-center justify-center">
                       <Link
-                        href="/tournaments/1"
+                        href={`/league-of-legends/tournaments/0d6934cc-19ca-4384-ab3b-e6c6406a10d3`}
                         className="flex h-full w-full items-center justify-center rounded-br-lg p-4 hover:bg-sky-500"
                       >
                         <span className="text-semibold text-sm text-white">

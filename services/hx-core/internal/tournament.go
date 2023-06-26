@@ -6,7 +6,7 @@ type Phase string
 
 const (
 	// PriorityNone indicates the task needs to be prioritized.
-	RegistrationPhase Phase = "registration"
+	RegistrationPhase Phase = "open"
 
 	// PriorityLow indicates a non urgent task.
 	ResultsTrackingPhase Phase = "tracking"

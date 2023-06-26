@@ -7,16 +7,16 @@ function CountdownDisplayWrapper({ days, hours, minutes, seconds }: any) {
   return (
     <div
       className={classnames(
-        "xs:text-lg flex items-center gap-3 font-medium text-gray-900 dark:text-gray-100 md:gap-2 md:text-xl lg:gap-6 xl:gap-2.5 xl:text-xl 2xl:text-2xl "
+        "xs:text-lg flex items-center gap-3 font-medium text-slate-900 dark:text-slate-100 md:gap-2 md:text-xl lg:gap-2.5 xl:gap-2 xl:text-xl 2xl:text-2xl "
       )}
     >
       {!!days && (
         <div className="3xl:w-16 shrink-0">
-          <span className="">{zeroPad(days)}</span>
+          <pre className="text-xl">{zeroPad(days)}</pre>
           <span className="md:hidden">d</span>
           <span
             className={classnames(
-              "hidden truncate pt-2.5 text-xs text-gray-600 dark:text-gray-400 md:block"
+              "hidden truncate pt-2.5 text-xs text-slate-600 dark:text-slate-400 md:block"
             )}
           >
             Days
@@ -24,33 +24,33 @@ function CountdownDisplayWrapper({ days, hours, minutes, seconds }: any) {
         </div>
       )}
       <div className="3xl:w-16 shrink-0">
-        <span className="">{zeroPad(hours)}</span>
+        <pre className="text-xl">{zeroPad(hours)}</pre>
         <span className="md:hidden">h</span>
         <span
           className={classnames(
-            "truncate pt-2.5 text-xs text-gray-600 dark:text-gray-400 md:block"
+            "truncate pt-2.5 text-xs text-slate-600 dark:text-slate-400 md:block"
           )}
         >
           Hours
         </span>
       </div>
       <div className="3xl:w-16 shrink-0">
-        <span className="">{zeroPad(minutes)}</span>
+        <pre className="text-xl">{zeroPad(minutes)}</pre>
         <span className="md:hidden">m</span>
         <span
           className={classnames(
-            "truncate pt-2.5 text-xs text-gray-600 dark:text-gray-400 md:block"
+            "truncate pt-2.5 text-xs text-slate-600 dark:text-slate-400 md:block"
           )}
         >
           Mins
         </span>
       </div>
       <div className="3xl:w-16 shrink-0">
-        <span className="">{zeroPad(seconds)}</span>
+        <pre className="text-xl">{zeroPad(seconds)}</pre>
         <span className="md:hidden">s</span>
         <span
           className={classnames(
-            "hidden truncate pt-2.5 text-xs text-gray-600 dark:text-gray-400 md:block"
+            "hidden truncate pt-2.5 text-xs text-slate-600 dark:text-slate-400 md:block"
           )}
         >
           Secs

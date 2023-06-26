@@ -24,19 +24,25 @@ export default function Tournament({ params }: TournamentProps) {
   const joinTournament = () => setJoin(!isJoined);
 
   return (
-    <div className="grid grid-cols-3 gap-6 p-1">
+    <div className="grid grid-cols-3 gap-6">
       <div className="col-span-2 border border-dashed border-green-500">
         {/* left side wraper */}
         <div className="flex p-3">right side</div>
       </div>
       <div className="col-span-1">
-        <div className="fixed right-0 top-0 flex h-screen w-[340px] flex-col justify-between p-3 pt-20">
+        <div className="fixed right-0 top-0 flex h-screen w-[380px] flex-col  justify-between pb-8 pr-8 pt-24">
           {/* sidebar */}
-          <div className="flex h-full flex-col justify-between border-l border-dashed border-slate-700 pl-4">
+          <div className="shadow-hi flex h-full flex-col justify-between  rounded-lg border-slate-700 bg-slate-800 p-8 shadow-highlight-100">
             {/* sidebar header */}
             <div className="block">
-              <h4 className="font-medium leading-4">Tournament n ABCD#1234</h4>
-              <div className="mb-7 p-4">
+              <h2
+                data-docsearch-ignore="true"
+                className="mb-3 text-xl font-bold tracking-tight text-slate-900 dark:text-slate-200"
+              >
+                Tournament Name
+              </h2>
+              <div className="text-xs text-gray-400">Created by</div>
+              <div className="py-6">
                 <ol className="relative ml-4 border-l border-gray-200 text-gray-500 dark:border-gray-700 dark:text-gray-400">
                   <li className="mb-7 ml-3">
                     <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-green-200 ring-2 ring-white dark:bg-green-900 dark:ring-green-600">
@@ -139,29 +145,31 @@ export default function Tournament({ params }: TournamentProps) {
             </div>
 
             {/* sidebar footer */}
-            <div className="block border-t-2 border-slate-700">
-              <div className="mt-4 grid grid-cols-3 gap-2">
-                <div className="col-span-1">
-                  <div className="gap flex flex-col items-center justify-center gap-1 border-r border-dashed border-gray-600 ">
-                    <div className="flex items-center">
-                      <CurrencyDollarIcon className="mr-1 h-4 w-4 text-green-400" />
-                      <span className="text-semibold text-xl text-white">
-                        1.500,00 BRL
-                      </span>
-                    </div>
-                  </div>
-                </div>
+            <div className="block border-t-2 border-slate-700 pt-6">
+              <div className="pb-3">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="col-span-auto border-r border-dashed border-slate-700">
+                    <h3 className="font-mono mb-2 font-medium  dark:text-slate-200  sm:text-sm">
+                      Prize pool
+                    </h3>
 
-                <div className="col-span-2 py-4">
-                  <h3 className="mb-1 font-medium dark:text-white sm:mb-1.5 sm:text-sm">
-                    Auction ends in
-                  </h3>
-                  <div className="flex flex-col items-center justify-center">
+                    <div className="flex items-center">
+                      <pre className="preroportional-nums mb-1 text-xl font-extrabold text-white">
+                        1.500,00
+                      </pre>
+                    </div>
+                    <span className="text-xs">BRL</span>
+                  </div>
+                  <div className="col-span-auto">
+                    <h3 className="mb-2 font-medium dark:text-slate-200  sm:text-sm">
+                      Starts in:
+                    </h3>
                     <TournamentCountdown date={Date.now() + 4000000 * 40} />
                   </div>
                 </div>
               </div>
-              <div className="p-4">
+
+              <div className="py-4">
                 <div className="flex flex-col">
                   <div className="mb-2 flex justify-between">
                     <span className="text-xs text-green-400">4/16 - Teams</span>

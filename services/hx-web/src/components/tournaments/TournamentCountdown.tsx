@@ -7,7 +7,7 @@ function CountdownDisplayWrapper({ days, hours, minutes, seconds }: any) {
   return (
     <div
       className={classnames(
-        "xs:text-lg flex items-center gap-3 font-medium text-slate-900 dark:text-slate-100 md:gap-2 md:text-xl lg:gap-2.5 xl:gap-2 xl:text-xl 2xl:text-2xl "
+        "xs:text-lg flex items-center gap-3 font-medium text-slate-900 dark:text-slate-100 md:gap-2 md:text-xl lg:gap-2.5 xl:gap-1 xl:text-xl 2xl:text-2xl "
       )}
     >
       {!!days && (

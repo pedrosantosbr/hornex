@@ -7,7 +7,7 @@ import InputLabel from "@/components/ui/form/input-label";
 export default function SignInPage() {
   return (
     <div className="flex h-screen flex-col items-center justify-between">
-      <div className="m-auto w-[450px] space-y-4 rounded-md border border-gray-800 bg-gray-950 p-6 sm:p-8 md:space-y-6">
+      <div className="m-auto w-[450px] space-y-4 rounded-md border border-gray-800 bg-gray-800 p-6 shadow-highlight-100 sm:p-8 md:space-y-6">
         <h1 className="text-left text-xl font-bold leading-tight tracking-tight text-white md:text-2xl">
           Criar uma conta
         </h1>
@@ -44,12 +44,8 @@ export default function SignInPage() {
             </label>
           </div>
 
-          <Button
-            className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-300 w-full rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
-            color="primary"
-            shape="rounded"
-          >
-            Entrar
+          <Button className="w-full" color="info" shape="rounded">
+            Registrar
           </Button>
         </form>
       </div>

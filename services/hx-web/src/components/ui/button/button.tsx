@@ -1,3 +1,4 @@
+"use client";
 import { useState, useRef, forwardRef, useImperativeHandle } from "react";
 import cn from "classnames";
 import { LoaderSizeTypes, LoaderVariantTypes } from "@/components/ui/Loader";

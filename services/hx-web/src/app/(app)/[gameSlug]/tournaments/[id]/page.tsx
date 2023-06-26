@@ -22,11 +22,11 @@ export default function Tournament({ params }: TournamentProps) {
 
   return (
     <div className="flex flex-grow">
-      <div className="4xl:max-w-[1760px] mx-auto flex w-full flex-grow flex-col transition-all xl:max-w-[1360px]">
+      <div className="mr-[460px] min-h-screen w-full">
         <div className="mb-2 h-[200px] rounded-lg bg-hero bg-cover bg-no-repeat ring-1 ring-slate-700 "></div>
         <TournamentTab />
       </div>
-      <div className="relative flex w-full flex-grow flex-col justify-between md:mr-auto lg:min-h-[calc(100vh-96px)] lg:w-[460px] lg:pl-12 xl:w-[592px] xl:pl-20">
+      <div className="fixed right-[2rem] flex h-screen w-[400px] flex-grow flex-col">
         <div className="block">
           <ol className="relative ml-4 border-l border-gray-200 text-gray-500 dark:border-gray-700 dark:text-gray-400">
             <li className="mb-7 ml-3">
@@ -131,10 +131,6 @@ export default function Tournament({ params }: TournamentProps) {
           prizePool={2000}
         />
       </div>
-      <TournamentFooter
-        auctionTime={Date.now() + 4000000 * 10}
-        prizePool={2000}
-      />
     </div>
   );
 }

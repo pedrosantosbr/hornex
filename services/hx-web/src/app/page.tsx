@@ -1,4 +1,3 @@
-"use client";
 import { GameList } from "@/components/games/GameList";
 import { Team } from "@/types/team";
 import LeagueOfLegendsThumb from "@/assets/images/games/league-of-legends.jpg";

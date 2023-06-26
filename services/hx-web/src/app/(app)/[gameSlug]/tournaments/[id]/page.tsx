@@ -2,7 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import classnames from "classnames";
-import { CalendarDaysIcon } from "@heroicons/react/20/solid";
+import {
+  CalendarDaysIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/20/solid";
 import Button from "@/components/ui/button/button";
 import TournamentTab from "@/components/tournaments/TournamentTab";
 
@@ -27,7 +30,7 @@ export default function Tournament({ params }: TournamentProps) {
         <div className="flex p-3">right side</div>
       </div>
       <div className="col-span-1">
-        <div className="fixed right-0 top-0 flex h-screen w-[33%] flex-col justify-between p-3 pt-20">
+        <div className="fixed right-0 top-0 flex h-screen w-[340px] flex-col justify-between p-3 pt-20">
           {/* sidebar */}
           <div className="flex h-full flex-col justify-between border-l border-dashed border-slate-700 pl-4">
             {/* sidebar header */}
@@ -136,7 +139,46 @@ export default function Tournament({ params }: TournamentProps) {
             </div>
 
             {/* sidebar footer */}
-            <div className="block">
+            <div className="block border-t-2 border-slate-700">
+              <div className="mt-4 grid grid-cols-3 gap-2">
+                <div className="col-span-1">
+                  <div className="gap flex flex-col items-center justify-center gap-1 border-r border-dashed border-gray-600 ">
+                    <div className="flex items-center">
+                      <CurrencyDollarIcon className="mr-1 h-4 w-4 text-green-400" />
+                      <span className="text-semibold text-xl text-white">
+                        1.500,00 BRL
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-span-2 py-4">
+                  <h3 className="mb-1 font-medium dark:text-white sm:mb-1.5 sm:text-sm">
+                    Auction ends in
+                  </h3>
+                  <div className="flex flex-col items-center justify-center">
+                    <TournamentCountdown date={Date.now() + 4000000 * 40} />
+                  </div>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex flex-col">
+                  <div className="mb-2 flex justify-between">
+                    <span className="text-xs text-green-400">4/16 - Teams</span>
+                    <span className="text-xs font-bold uppercase italic text-green-400">
+                      open
+                    </span>
+                  </div>
+                  <div className="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+                    <div
+                      className={classnames(
+                        "h-2.5 rounded-full bg-green-600",
+                        "w-[70%]"
+                      )}
+                    ></div>
+                  </div>
+                </div>
+              </div>
               <Button
                 className="w-full"
                 shape="rounded"

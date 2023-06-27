@@ -7,7 +7,7 @@ function CountdownDisplayWrapper({ days, hours, minutes, seconds }: any) {
   return (
     <div
       className={classnames(
-        "xs:text-lg flex items-center gap-3 font-medium text-slate-900 dark:text-slate-100 md:gap-2 md:text-xl lg:gap-2.5 xl:gap-1 xl:text-xl 2xl:text-2xl "
+        "xs:text-lg flex items-center gap-1 font-medium text-slate-900 dark:text-slate-100 md:text-xl lg:gap-1 xl:gap-1 xl:text-xl 2xl:text-2xl "
       )}
     >
       {!!days && (
@@ -76,7 +76,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
 };
 
 export default function TournamentCountdown({
-  date,
+  date
 }: {
   date: string | number | Date | undefined;
 }) {

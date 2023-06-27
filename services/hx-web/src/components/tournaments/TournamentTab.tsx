@@ -105,9 +105,9 @@ export default function TournamentTab() {
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "-mb-1.5 py-2 text-sm font-medium text-slate-400",
+                  "-mb-1.5 py-2 text-sm font-medium text-slate-400 outline-none hover:text-sky-400",
                   selected
-                    ? "border-b-2 border-sky-400 text-sky-400"
+                    ? "border-b-2 border-sky-400 !text-sky-400"
                     : "text-slate-400"
                 )
               }
@@ -120,10 +120,7 @@ export default function TournamentTab() {
           {Object.values(categories).map((posts, idx) => (
             <Tab.Panel
               key={idx}
-              className={classNames(
-                "rounded-xl bg-slate-800 p-3",
-                "ring-white ring-opacity-60 ring-offset-2 ring-offset-slate-400 focus:outline-none focus:ring-2"
-              )}
+              className={classNames("rounded-xl bg-slate-800 p-3")}
             >
               <ul className="flex flex-col gap-3">
                 {posts.map((post) => (

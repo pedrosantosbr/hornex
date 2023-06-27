@@ -86,23 +86,29 @@ export default function TournamentTab() {
         commentCount: 1,
         shareCount: 2,
       },
+      {
+        id: 3,
+        title: "The worst advice we've ever heard about coffee",
+        date: "4d ago",
+        commentCount: 1,
+        shareCount: 2,
+      },
     ],
   });
 
   return (
-    <div className="w-full sm:px-0">
+    <div className="w-full rounded-xl bg-slate-800 shadow-highlight-100 sm:px-0">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-slate-800 p-1 shadow-highlight-100">
+        <Tab.List className="mx-6 flex gap-8 border-b-2 border-slate-600 py-1">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg border-none py-2 text-sm font-medium leading-5 text-slate-400",
-                  "ring-opacity-60  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-sky-400",
+                  "-mb-1.5 py-2 text-sm font-medium text-slate-400 outline-none hover:text-sky-400",
                   selected
-                    ? "bg-sky-400 text-white shadow-highlight-200"
-                    : "text-slate-400 hover:bg-white/[0.12] hover:text-white"
+                    ? "border-b-2 border-sky-400 !text-sky-400"
+                    : "text-slate-400"
                 )
               }
             >
@@ -114,12 +120,9 @@ export default function TournamentTab() {
           {Object.values(categories).map((posts, idx) => (
             <Tab.Panel
               key={idx}
-              className={classNames(
-                "rounded-xl bg-slate-800 p-3",
-                "ring-white ring-opacity-60 ring-offset-2 ring-offset-slate-400 focus:outline-none focus:ring-2"
-              )}
+              className={classNames("rounded-xl bg-slate-800 p-3")}
             >
-              <ul>
+              <ul className="flex flex-col gap-3">
                 {posts.map((post) => (
                   <li
                     key={post.id}

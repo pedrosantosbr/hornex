@@ -25,9 +25,11 @@ export default function Tournament({ params }: TournamentProps) {
 
   return (
     <div className="grid grid-cols-3 gap-6">
-      <div className="col-span-2 border border-dashed border-green-500">
+      <div className="col-span-2 border-green-500">
         {/* left side wraper */}
-        <div className="flex p-3">right side</div>
+        <div className="flex pt-8">
+          <TournamentTab />
+        </div>
       </div>
       <div className="col-span-1">
         <div className="fixed right-0 top-0 flex h-screen w-[380px] flex-col  justify-between pb-8 pr-8 pt-24">

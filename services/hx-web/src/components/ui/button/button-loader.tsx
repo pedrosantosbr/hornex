@@ -1,7 +1,7 @@
 import Loader, {
   LoaderSizeTypes,
   LoaderVariantTypes,
-} from "@/components/ui/Loader";
+} from "@/components/ui/loader";
 
 export default function ButtonLoader({
   size,

@@ -28,7 +28,7 @@ function CountdownDisplayWrapper({ days, hours, minutes, seconds }: any) {
         <span className="md:hidden">h</span>
         <span
           className={classnames(
-            "truncate pt-2.5 text-xs text-slate-600 dark:text-slate-400 md:block"
+            "hidden truncate pt-2.5 text-xs text-slate-600 dark:text-slate-400 md:block"
           )}
         >
           Hours
@@ -39,7 +39,7 @@ function CountdownDisplayWrapper({ days, hours, minutes, seconds }: any) {
         <span className="md:hidden">m</span>
         <span
           className={classnames(
-            "truncate pt-2.5 text-xs text-slate-600 dark:text-slate-400 md:block"
+            "hidden truncate pt-2.5 text-xs text-slate-600 dark:text-slate-400 md:block"
           )}
         >
           Mins

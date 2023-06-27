@@ -4,14 +4,15 @@ import Image from "next/image";
 import classnames from "classnames";
 import {
   CalendarDaysIcon,
-  CurrencyDollarIcon,
+  CurrencyDollarIcon
 } from "@heroicons/react/20/solid";
 import Button from "@/components/ui/button/button";
-import TournamentTab from "@/components/tournaments/TournamentTab";
+import TournamentTab from "@/components/tournaments/tournament-main/TournamentTab";
 
 import { useState } from "react";
 import TournamentCountdown from "@/components/tournaments/TournamentCountdown";
 import TournamentFooter from "@/components/tournaments/TournamentFooter";
+import { TournamentMain } from "@/components/tournaments/tournament-main/TournamentMain";
 
 type TournamentProps = {
   params: {
@@ -24,17 +25,17 @@ export default function Tournament({ params }: TournamentProps) {
   const joinTournament = () => setJoin(!isJoined);
 
   return (
-    <div className="grid grid-cols-3 gap-6">
+    <div className="flex flex-col gap-4 md:grid md:grid-cols-[1fr_1fr_380px] md:gap-0">
       <div className="col-span-2 border-green-500">
         {/* left side wraper */}
-        <div className="flex pt-8">
+        <TournamentMain>
           <TournamentTab />
-        </div>
+        </TournamentMain>
       </div>
-      <div className="col-span-1">
-        <div className="fixed right-0 top-0 flex h-screen w-[380px] flex-col  justify-between pb-8 pr-8 pt-24">
+      <div>
+        <div className="right-0 top-0 flex h-screen flex-col justify-between pb-8 md:fixed md:w-[380px] md:pr-8 md:pt-24">
           {/* sidebar */}
-          <div className="shadow-hi flex h-full flex-col justify-between  rounded-lg border-slate-700 bg-slate-800 p-8 shadow-highlight-100">
+          <div className="relative flex h-full flex-grow flex-col justify-between rounded-lg border-slate-700 bg-slate-800 p-8 shadow-highlight-100">
             {/* sidebar header */}
             <div className="block">
               <h2
@@ -147,7 +148,7 @@ export default function Tournament({ params }: TournamentProps) {
             </div>
 
             {/* sidebar footer */}
-            <div className="block border-t-2 border-slate-700 pt-6">
+            <div className="sticky bottom-0 z-10 flex-shrink-0 border-t-2 border-slate-700 bg-slate-800 pt-6">
               <div className="pb-3">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="col-span-auto border-r border-dashed border-slate-700">

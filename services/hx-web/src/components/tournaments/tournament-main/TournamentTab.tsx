@@ -13,15 +13,15 @@ export default function TournamentTab() {
         title: "Does drinking coffee make you smarter?",
         date: "5h ago",
         commentCount: 5,
-        shareCount: 2,
+        shareCount: 2
       },
       {
         id: 2,
         title: "So you've bought coffee... now what?",
         date: "2h ago",
         commentCount: 3,
-        shareCount: 2,
-      },
+        shareCount: 2
+      }
     ],
     Teams: [
       {
@@ -29,15 +29,15 @@ export default function TournamentTab() {
         title: "Is tech making coffee better or worse?",
         date: "Jan 7",
         commentCount: 29,
-        shareCount: 16,
+        shareCount: 16
       },
       {
         id: 2,
         title: "The most innovative things happening in coffee",
         date: "Mar 19",
         commentCount: 24,
-        shareCount: 12,
-      },
+        shareCount: 12
+      }
     ],
     Brackets: [
       {
@@ -45,15 +45,15 @@ export default function TournamentTab() {
         title: "Ask Me Anything: 10 answers to your questions about coffee",
         date: "2d ago",
         commentCount: 9,
-        shareCount: 5,
+        shareCount: 5
       },
       {
         id: 2,
         title: "The worst advice we've ever heard about coffee",
         date: "4d ago",
         commentCount: 1,
-        shareCount: 2,
-      },
+        shareCount: 2
+      }
     ],
     Rules: [
       {
@@ -61,15 +61,15 @@ export default function TournamentTab() {
         title: "Ask Me Anything: 10 answers to your questions about coffee",
         date: "2d ago",
         commentCount: 9,
-        shareCount: 5,
+        shareCount: 5
       },
       {
         id: 2,
         title: "The worst advice we've ever heard about coffee",
         date: "4d ago",
         commentCount: 1,
-        shareCount: 2,
-      },
+        shareCount: 2
+      }
     ],
     Support: [
       {
@@ -77,35 +77,35 @@ export default function TournamentTab() {
         title: "Ask Me Anything: 10 answers to your questions about coffee",
         date: "2d ago",
         commentCount: 9,
-        shareCount: 5,
+        shareCount: 5
       },
       {
         id: 2,
         title: "The worst advice we've ever heard about coffee",
         date: "4d ago",
         commentCount: 1,
-        shareCount: 2,
+        shareCount: 2
       },
       {
         id: 3,
         title: "The worst advice we've ever heard about coffee",
         date: "4d ago",
         commentCount: 1,
-        shareCount: 2,
-      },
-    ],
+        shareCount: 2
+      }
+    ]
   });
 
   return (
     <div className="w-full rounded-xl bg-slate-800 shadow-highlight-100 sm:px-0">
       <Tab.Group>
-        <Tab.List className="mx-6 flex gap-8 border-b-2 border-slate-600 py-1">
+        <Tab.List className="mx-6 flex gap-4 overflow-auto border-b-2 border-slate-600 py-1 sm:overflow-visible md:gap-10">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "-mb-1.5 py-2 text-sm font-medium text-slate-400 outline-none hover:text-sky-400",
+                  "-mb-1.5 py-2 text-sm font-medium text-slate-400 outline-none transition-all hover:text-sky-400",
                   selected
                     ? "border-b-2 border-sky-400 !text-sky-400"
                     : "text-slate-400"

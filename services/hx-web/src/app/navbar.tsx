@@ -30,12 +30,37 @@ const HeaderRightArea: FC = () => {
   );
 };
 
+const navItems = [
+  {
+    navTo: "/",
+    title: "Games"
+  },
+  {
+    navTo: "/terms-and-conditions",
+    title: "Terms and Conditions"
+  }
+];
+
 export default function Navbar() {
   return (
-    <nav className="fixed z-50 flex h-16 w-full border-b border-slate-700 bg-slate-800 py-2">
-      <div className="z-40 ml-auto flex justify-end px-6 lg:px-8">
+    <div className="fixed z-50 flex h-16 w-full border-b border-slate-700 bg-slate-800 py-2">
+      <nav className="z-40 ml-auto flex justify-end px-6 lg:px-8">
+        <div className="flex items-center">
+          <ul className="flex space-x-8 border-r border-r-gray-700 pr-4 text-sm font-semibold leading-6 text-slate-700 dark:text-slate-200">
+            {navItems.map((item) => (
+              <li key={item.title}>
+                <Link
+                  href={item.navTo}
+                  className="hover:text-sky-500 dark:hover:text-sky-400"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
         <HeaderRightArea />
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }

@@ -99,13 +99,13 @@ export default function TournamentTab() {
   return (
     <div className="w-full rounded-xl bg-slate-800 shadow-highlight-100 sm:px-0">
       <Tab.Group>
-        <Tab.List className="mx-6 flex gap-4 overflow-auto border-b-2 border-slate-600 py-1 sm:overflow-visible md:gap-10">
+        <Tab.List className="mx-6 flex gap-4 overflow-auto border-b-2 border-slate-600 py-1 no-scrollbar sm:overflow-visible md:gap-10">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "-mb-1.5 py-2 text-sm font-medium text-slate-400 outline-none transition-all hover:text-sky-400",
+                  "-mb-1.5 py-2 text-sm font-medium text-slate-400 outline-none transition-colors hover:text-sky-400",
                   selected
                     ? "border-b-2 border-sky-400 !text-sky-400"
                     : "text-slate-400"

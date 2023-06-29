@@ -11,7 +11,12 @@ export const TermsText: React.FC<TermsTextProps> = ({
   className
 }) => {
   return (
-    <p className={classnames("indent-8 text-sm md:text-base", className)}>
+    <p
+      className={classnames(
+        "indent-8 text-sm text-gray-400 md:text-base",
+        className
+      )}
+    >
       {children}
     </p>
   );

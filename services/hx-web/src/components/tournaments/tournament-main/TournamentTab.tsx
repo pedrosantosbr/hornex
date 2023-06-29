@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import { TournamentRules } from "./TournamentRules";
+
+import { TournamentRules } from "@/components/tournaments/tournament-main/TournamentRules";
+import { TournamentOverview } from "@/components/tournaments/tournament-main/TournamentOverview";
+import { TournamentTeams } from "@/components/tournaments/tournament-main/TournamentTeams";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -8,8 +11,8 @@ function classNames(...classes: string[]) {
 
 export default function TournamentTab() {
   let [categories] = useState({
-    Overview: <div>Teams</div>,
-    Teams: <div>Teams</div>,
+    Overview: <TournamentOverview />,
+    Teams: <TournamentTeams />,
     Rules: <TournamentRules />
   });
 
@@ -33,7 +36,7 @@ export default function TournamentTab() {
             </Tab>
           ))}
         </Tab.List>
-        <Tab.Panels className="mx-6">
+        <Tab.Panels className="md:mx-6">
           {Object.values(categories).map((component, idx) => (
             <Tab.Panel
               key={idx}

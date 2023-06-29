@@ -4,12 +4,29 @@ interface TournamentRulesProps {
   classNames?: string;
 }
 
-interface TournamentTextProps {
+interface RulesTextProps {
   children: React.ReactNode;
   className?: string;
 }
-const TournamnetText = ({ children, className }: TournamentTextProps) => (
-  <p className={classnames("", className)}>{children}</p>
+const RulesText = ({ children, className }: RulesTextProps) => (
+  <p className={classnames("indent-8 text-sm md:text-base", className)}>
+    {children}
+  </p>
+);
+
+interface RulesSubHeadingProps {
+  children: React.ReactNode;
+  className?: string;
+}
+const RulesSubHeading = ({ children, className }: RulesSubHeadingProps) => (
+  <h3
+    className={classnames(
+      "pt-2 text-sm font-bold md:pt-4 md:text-base",
+      className
+    )}
+  >
+    {children}
+  </h3>
 );
 
 export const TournamentRules: React.FC<TournamentRulesProps> = ({
@@ -21,41 +38,44 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
         Tournament Rules
       </h2>
 
-      <section className="my-2 flex flex-col gap-2">
-        <p>
+      <section className="m-auto my-4 flex max-w-4xl flex-col gap-2">
+        <RulesSubHeading>Important!</RulesSubHeading>
+        <RulesText>
           This competition is not affiliated with or sponsored by Riot Games,
           Inc. or League of Legends Esports.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Refer to the tournament details to see what game modes are tracked.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Smurfing will result in an immediate and permanent ban from Repeat.gg
           and all winnings will be forfeited. This can include, but is not
           limited to, creating a new account to play with or intentionally
           losing games to lower your rank or affect your matchmaking lobbies.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           You must play the minimum number of games in order to get paid out in
           a tournament. The minimum number of games to play is the same as the
           number of games we count for your score, which can be found in the
           Tournament Details.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Winners of digital prizes have 14 days after the tournament ends to
           claim the prize.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Winners of physical prizes have 7 days after the tournament ends to
           claim the prize.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           If users end up with the same score in the tournament, the tiebreaker
           for prize pool will prioritize the user who entered the tournament
           first.
-        </p>
-        <h3>When Physical Products Tournament Are Given to Top ## Places</h3>
-        <p>
+        </RulesText>
+        <RulesSubHeading>
+          When Physical Products Tournament Are Given to Top ## Places
+        </RulesSubHeading>
+        <RulesText>
           No Purchase is necessary to enter or win. Odds of winning depend on
           the number of entries within the tournament. Giveaway winners are
           subject to all applicable federal, state and local laws and
@@ -65,20 +85,20 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
           represent and warrant that you meet the eligibility requirements. In
           addition, you agree to accept Repeat.gg&quot;s decisions as final and
           binding as it relates to the content of this campaign.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           How to enter: By joining this tournament you have entered the
           giveaway.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           You must provide the information requested by Repeat in order to claim
           the prize. You may not enter more times than indicated by using
           multiple email addresses, identities, or devices in an attempt to
           circumvent the rules. If you use fraudulent methods or otherwise
           attempt to circumvent the rules of the giveaway, your submission may
           be disqualified at the sole discretion of Repeat.gg.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Actual/appraised value of prizes may differ at time of prize award.
           The specifics of the prize shall be solely determined by Repeat.gg. No
           cash or other prize substitution shall be permitted except for at
@@ -91,8 +111,8 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
           prize constitutes permission for Repeat.gg to use the Winner&quot;s
           name, likeness, and entry for purposes of advertising and trade
           without further compensation, unless prohibited by law.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Winners will be notified within 7 days of the winner selection.
           Repeat.gg shall have no liability for a Winner&quot;s failure to
           receive notices due to spam, junk e-mail or other security settings or
@@ -108,8 +128,8 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
           Repeat.gg&quot;s sole discretion will result in the Winner&quot;s
           disqualification as winner, and all privileges as winner will be
           immediately terminated.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Repeat.gg reserves the right, in its sole discretion, to cancel,
           terminate, modify or suspend the Tournament Giveaway should virus,
           bug, non-authorised human intervention, fraud, or other cause beyond
@@ -131,8 +151,8 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
           of the Tournament Giveaway may be a violation of criminal and civil
           laws. Should such an attempt be made, Repeat.gg reserves the right to
           seek damages to the fullest extent permitted by law.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Limitation of Liability: By entering the Tournament Giveaway you agree
           to release and hold harmless Repeat.gg and its subsidiaries,
           affiliates, advertising and promotion agencies, partners,
@@ -150,8 +170,8 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
           mechanical equipment; (v) the unavailability or inaccessibility of any
           transmissions, telephone, or Internet service; (vi) printing errors;
           (vii) lost, late, postage due, misdirected, or undeliverable mail.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Disputes: This Tournament Giveaway is governed by the laws of United
           States, without respect to conflict of law doctrines. By participating
           in this Campaign, you agree that any and all disputes that cannot be
@@ -165,8 +185,8 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
           other than actual out-of-pocket expenses (i.e. costs associated with
           entering the Tournament Giveaway). You further waive all rights to
           have damages multiplied or increased.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           The Tournament Giveaway is in no way sponsored, endorsed, administered
           by, or associated with Facebook, Twitter, Instagram, Snapchat,
           YouTube, Reddit, Pinterest, LinkedIn or any other social networks that
@@ -174,26 +194,28 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
           providing your information to the owner of the Tournament Giveaway and
           not to Facebook, Twitter, Instagram, Snapchat, YouTube, Reddit,
           Pinterest, LinkedIn or any other social networks.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Acceptance of Rules: By participating in the tournament giveaway, You
           have affirmatively reviewed, accepted, and agreed to all of the
           Official Rules, Terms and Conditions.
-        </p>
-        <h3>When Tournament Includes a Random Giveaway or “Door” Prize </h3>
-        <p>
+        </RulesText>
+        <RulesSubHeading>
+          When Tournament Includes a Random Giveaway or “Door” Prize{" "}
+        </RulesSubHeading>
+        <RulesText>
           Though this Tournament Giveaway awards winners at random, Repeat.gg
           are not bound by US lottery rules as there is no consideration of
           entry to participate in the giveaway.
-        </p>
-        <p>
+        </RulesText>
+        <RulesText>
           Consideration - of which there are two types of consideration consists
           of; Monetary and Non-Monetary. Monetary is the purchase of a
           Sponsor&quot;s product or any other payment/entry fee required to
           enter. Non-monetary is substantial time or effort expended which
           benefits the Sponsor in some direct way.
-        </p>
-        <p>*All the above terms and conditions also apply*</p>
+        </RulesText>
+        <RulesText>*All the above terms and conditions also apply*</RulesText>
       </section>
     </main>
   );

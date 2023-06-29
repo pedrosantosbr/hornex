@@ -11,13 +11,13 @@ export const TermsUnorderedList: React.FC<TermsUnorderedListProps> = ({
   className
 }) => {
   return (
-    <h4
+    <ul
       className={classnames(
         "list-disc p-2 pl-8 text-sm md:text-base",
         className
       )}
     >
       {children}
-    </h4>
+    </ul>
   );
 };

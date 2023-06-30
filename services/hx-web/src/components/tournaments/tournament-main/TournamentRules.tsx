@@ -9,7 +9,7 @@ interface RulesTextProps {
   className?: string;
 }
 const RulesText = ({ children, className }: RulesTextProps) => (
-  <p className={classnames("indent-8 text-sm md:text-base", className)}>
+  <p className={classnames("text-justify indent-8 text-sm", className)}>
     {children}
   </p>
 );
@@ -30,11 +30,11 @@ const RulesSubHeading = ({ children, className }: RulesSubHeadingProps) => (
 );
 
 export const TournamentRules: React.FC<TournamentRulesProps> = ({
-  classNames
+  classNames,
 }) => {
   return (
     <main className={classnames("p-6", classNames)}>
-      <h2 className="text-center text-base font-bold tracking-tighter text-slate-400 md:text-xl">
+      <h2 className="m-auto max-w-4xl text-left text-base font-bold tracking-tighter md:text-xl">
         Tournament Rules
       </h2>
 

@@ -11,16 +11,14 @@ interface TournamentFooterProps {
 export default function TournamentFooter({
   className,
   isJoined,
-  joinTournament
+  joinTournament,
 }: TournamentFooterProps) {
   return (
     <div
-      className={
-        (classnames(
-          "sticky bottom-0 z-10 border-t-2 border-slate-700 bg-slate-800 pt-6 md:-mx-2"
-        ),
-        className)
-      }
+      className={classnames(
+        "sticky bottom-0 z-10 flex-shrink-0 border-t-2 border-slate-700 bg-slate-800 pt-6",
+        className
+      )}
     >
       <div className="pb-3">
         <div className="grid grid-cols-2 gap-4">

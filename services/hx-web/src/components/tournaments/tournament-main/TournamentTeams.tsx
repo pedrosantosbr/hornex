@@ -151,7 +151,7 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
   ];
 
   return (
-    <main className={classnames("p-6", classNames)}>
+    <main className={classnames("m-auto flex max-w-5xl p-6", classNames)}>
       <section className="flex w-full flex-col gap-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">

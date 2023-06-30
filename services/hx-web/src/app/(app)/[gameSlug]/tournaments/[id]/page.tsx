@@ -162,7 +162,7 @@ export default function Tournament({ params }: TournamentProps) {
         </div>
       </div>
       <TournamentFooter
-        className="bg-slate-900 pb-4 sm:hidden"
+        className="bg-slate-900 pb-4 md:hidden"
         isJoined={isJoined}
         joinTournament={joinTournament}
       />

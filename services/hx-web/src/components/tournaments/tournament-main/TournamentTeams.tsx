@@ -176,9 +176,14 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
                   {team.members.map((member, i) => (
                     <li
                       key={i}
-                      className="grid grid-cols-6 justify-items-center rounded-md p-2 text-xs"
+                      className={classnames(
+                        "grid grid-cols-6 justify-items-center rounded-md p-2 text-xs",
+                        i % 2 === 0
+                          ? "bg-slate-900 shadow-highlight-100"
+                          : "ring-1 ring-inset ring-slate-700"
+                      )}
                     >
-                      <span className="col-span-3 place-self-start text-sky-200 underline">
+                      <span className="col-span-3 place-self-start text-sky-200">
                         {member.username}
                       </span>
 

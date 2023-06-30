@@ -1,6 +1,4 @@
-import { TermsSubHeading } from "@/components/terms-and-contidions/TermsSubHeading";
-import { TermsText } from "@/components/terms-and-contidions/TermsText";
-import { TermsUnorderedList } from "@/components/terms-and-contidions/TermsUnorderedList";
+import { TermsSubHeading, TermsText, TermsUnorderedList } from "@/components/policies/TermsAndConditions";
 
 export default function TermsAndConditions() {
   return (
@@ -9,13 +7,13 @@ export default function TermsAndConditions() {
         <h1 className="text-left text-xl font-bold tracking-tighter text-white md:text-2xl">
           Terms and Conditions
         </h1>
-        <h3 className="border-b border-slate-600 pb-4 text-sm">
+        <h3 className="pb-4 text-sm">
           {new Date().toLocaleDateString("en-US", { dateStyle: "full" })}
         </h3>
         <main className="flex flex-col gap-2 py-2">
           <TermsSubHeading>OVERVIEW - PLAY NICE</TermsSubHeading>
           <TermsText>
-            Repeat Technologies, Inc. Hornex” (formerly known as Hornex Gaming)
+            Hornex Technologies, Inc. Hornex” (formerly known as Hornex Gaming)
             strives to provide a fair and equitable system for all our users. We
             endeavor to treat our clients as we would like to be treated and
             expect all our clients to treat each other with respect and honesty.
@@ -25,15 +23,15 @@ export default function TermsAndConditions() {
             charges.
           </TermsText>
           <TermsText>
-            <b>IMPORTANT LEGAL NOTICE REGARDING TERMS OF USE OF REPEAT.GG</b>
+            <b>IMPORTANT LEGAL NOTICE REGARDING TERMS OF USE OF HORNEX.GG</b>
           </TermsText>
           <TermsText>
             IMPORTANT! PLEASE CAREFULLY READ THESE TERMS OF USE BEFORE USING
-            REPEAT.GG, AS THEY AFFECT YOUR LEGAL RIGHTS AND OBLIGATIONS.
+            HORNEX.GG, AS THEY AFFECT YOUR LEGAL RIGHTS AND OBLIGATIONS.
           </TermsText>
           <TermsSubHeading>USER AGREEMENT</TermsSubHeading>
           <TermsText>
-            Repeat.gg owns and operates the Website that links to these Terms of
+            Hornex.gg owns and operates the Website that links to these Terms of
             Use. We are pleased to offer you access to our Website and the
             ability to participate in our online gaming contests of skill, other
             content, products, services, and promotions (collectively the
@@ -51,11 +49,11 @@ export default function TermsAndConditions() {
             uploading, submitting or downloading any information or content from
             or to the Website. IF YOU DO NOT AGREE TO BE BOUND BY ALL OF THESE
             TERMS OF USE, DO NOT USE THE WEBSITE. These Terms of Use constitute
-            a legal agreement between you and Repeat.gg and shall apply to your
+            a legal agreement between you and Hornex.gg and shall apply to your
             use of the Website and the Services even after termination.
           </TermsText>
           <TermsText>
-            From time to time, Repeat.gg may define and post on the Site
+            From time to time, Hornex.gg may define and post on the Site
             additional, specific terms, codes of conduct or guidelines that
             govern your use of the Site or any special events (“Special
             Events”). In the event of a discrepancy between these Terms and any
@@ -108,9 +106,9 @@ export default function TermsAndConditions() {
           </TermsText>
           <TermsText>
             You may establish only one account per person to participate in the
-            Services offered on the Website. In the event Repeat.gg discovers
+            Services offered on the Website. In the event Hornex.gg discovers
             that you have opened more than one account per person, in addition
-            to any other rights that Repeat.gg may have, Repeat.gg reserves the
+            to any other rights that Hornex.gg may have, Hornex.gg reserves the
             right to suspend or terminate any or all of your accounts and
             terminate, withhold or revoke the awarding of any prizes. You are
             responsible for maintaining the confidentiality of your login names
@@ -151,10 +149,10 @@ export default function TermsAndConditions() {
             Account Holder.
           </TermsText>
           <TermsText>
-            Repeat.gg employees may use the Website, and will from time to time
+            Hornex.gg employees may use the Website, and will from time to time
             do so for the purpose of testing the site user experience,
             socializing and competing with customers to build community, and
-            other reasonable and fair uses at the discretion of Repeat.gg.
+            other reasonable and fair uses at the discretion of Hornex.gg.
           </TermsText>
           <TermsSubHeading>CONTEST ENTRY</TermsSubHeading>
           <TermsText>
@@ -167,7 +165,7 @@ export default function TermsAndConditions() {
           <TermsText>
             When you select to participate in a Contest and complete the entry
             process, the listed amount of US dollars will be debited from your
-            Repeat.gg account.
+            Hornex.gg account.
           </TermsText>
           <TermsSubHeading>REFUND POLICY</TermsSubHeading>
           <TermsText>
@@ -178,7 +176,7 @@ export default function TermsAndConditions() {
           <TermsSubHeading>CONDITIONS OF PARTICIPATION</TermsSubHeading>
           <TermsText>
             By entering a Contest, entrants agree to be bound by these Rules and
-            the decisions of Repeat.gg, which shall be final and binding in all
+            the decisions of Hornex.gg, which shall be final and binding in all
             respects. The Company, at its sole discretion, may disqualify any
             entrant from a Contest, refuse to award benefits or prizes and
             require the return of any prizes, if the entrant engages in conduct
@@ -219,7 +217,7 @@ export default function TermsAndConditions() {
             </li>
             <li>
               Attaching GameID&quot;s to your account that are not owned by the
-              Repeat.gg account holder.
+              Hornex.gg account holder.
             </li>
             <li>
               Tampering with the administration of a Contest or trying to in any
@@ -233,24 +231,24 @@ export default function TermsAndConditions() {
             <li>Abusing the Website in any way.</li>
           </TermsUnorderedList>
           <TermsText>
-            Repeat.gg reserves the right to close or suspend the Accounts of,
+            Hornex.gg reserves the right to close or suspend the Accounts of,
             and void all account balances and entries by any person where, in
-            Repeat.gg&quot;s reasonable opinion, the Account has not been
-            operated with integrity, followed Repeat.ggs Conditions of
+            Hornex.gg&quot;s reasonable opinion, the Account has not been
+            operated with integrity, followed Hornex.ggs Conditions of
             Participation and/or the matches had not been played on a good faith
-            basis. Repeat.gg can in its sole discretion, withhold any or all
+            basis. Hornex.gg can in its sole discretion, withhold any or all
             related funds in the Account pending the outcome of an investigation
             on that Account.
           </TermsText>
           <TermsText>
             Users further acknowledge that the forfeiture and/or return of any
-            prize shall in no way prevent Repeat.gg from pursuing criminal or
+            prize shall in no way prevent Hornex.gg from pursuing criminal or
             civil proceedings in connection with such conduct.
           </TermsText>
           <TermsText>
             By entering into a Contest or accepting any prize, entrants,
             including but not limited to the winner(s), agree to indemnify,
-            release and to hold harmless Repeat.gg, its parents, subsidiaries,
+            release and to hold harmless Hornex.gg, its parents, subsidiaries,
             affiliates and agents, as well as the officers, directors,
             employees, shareholders and representatives of any of the foregoing
             entities (collectively, the “Released Parties”), from any and all
@@ -260,14 +258,14 @@ export default function TermsAndConditions() {
             Contest, the receipt, ownership, use or misuse of any prize or while
             preparing for, participating in and/or travelling to or from any
             prize related activity, as well as any claims based on publicity
-            rights, defamation, or invasion of privacy. Repeat.gg may, in its
+            rights, defamation, or invasion of privacy. Hornex.gg may, in its
             sole and absolute discretion, require an Authorized Account Holder
             to execute a separate release of claims similar to the one listed
             above in this Paragraph as a condition of being awarded any prize or
             receiving any payout.
           </TermsText>
           <TermsText>
-            Repeat.gg is not responsible for: any incorrect, invalid or
+            Hornex.gg is not responsible for: any incorrect, invalid or
             inaccurate entry information; human errors; postal delays/postage
             due mail; technical malfunctions; failures, including public utility
             or telephone outages; omissions, interruptions, deletions or defects
@@ -289,7 +287,7 @@ export default function TermsAndConditions() {
             errors, or any combination thereof.
           </TermsText>
           <TermsText>
-            Repeat.gg is not responsible for incomplete, illegible, misdirected
+            Hornex.gg is not responsible for incomplete, illegible, misdirected
             or stolen entries. If for any reason a Contest is not capable of
             running as originally planned, or if a Contest, computer
             application, or website associated therewith (or any portion
@@ -298,7 +296,7 @@ export default function TermsAndConditions() {
             rules, or if infection by a computer (or similar) virus, bug,
             tampering, unauthorized intervention, actions by entrants, fraud,
             technical failures, or any other causes of any kind, in the sole
-            opinion of Repeat.gg corrupts or affects the administration,
+            opinion of Hornex.gg corrupts or affects the administration,
             security, fairness, integrity, or proper conduct of a Contest, the
             Company reserves the right, at its sole discretion, to disqualify
             any individual implicated in such action and/or to cancel,
@@ -311,23 +309,23 @@ export default function TermsAndConditions() {
             ANY ATTEMPT BY AN ENTRANT OR ANY OTHER INDIVIDUAL TO DELIBERATELY
             DAMAGE THE WEBSITE OR UNDERMINE THE LEGITIMATE OPERATION OF ANY
             CONTEST IS A VIOLATION OF CRIMINAL AND/OR CIVIL LAWS AND SHOULD SUCH
-            AN ATTEMPT BE MADE, REPEAT.GG RESERVES THE RIGHT TO SEEK DAMAGES AND
+            AN ATTEMPT BE MADE, HORNEX.GG RESERVES THE RIGHT TO SEEK DAMAGES AND
             OTHER REMEDIES FROM ANY SUCH PERSON TO THE FULLEST EXTENT PERMITTED
             BY LAW.
           </TermsText>
           <TermsText>
-            All entries become the property of Repeat.gg and will not be
+            All entries become the property of Hornex.gg and will not be
             acknowledged or returned.
           </TermsText>
           <TermsText>
             To be eligible to enter any contest or receive any prize, the
-            Authorized Account Holder may be required to provide Repeat.gg with
+            Authorized Account Holder may be required to provide Hornex.gg with
             additional documentation and/or information to verify the identity
             of the Authorized Account Holder, and to provide proof that all
             eligibility requirements are met. In the event of a dispute as to
             the identity or eligibility of an Authorized Account Holder,
-            Repeat.gg will, in its sole and absolute discretion, utilize certain
-            information collected by Repeat.gg to assist in verifying the
+            Hornex.gg will, in its sole and absolute discretion, utilize certain
+            information collected by Hornex.gg to assist in verifying the
             identity and/or eligibility of such Authorized Account Holder.
           </TermsText>
           <TermsText>
@@ -340,15 +338,15 @@ export default function TermsAndConditions() {
             name, voice, and likeness/photograph in and in connection with the
             development, production, distribution and/or exploitation of any
             Contest or the Website. Winners agree that from the date of
-            notification by Repeat.gg of their status as a potential winner and
-            continuing until such time when Repeat.gg informs them that they no
+            notification by Hornex.gg of their status as a potential winner and
+            continuing until such time when Hornex.gg informs them that they no
             longer need to do so that they will make themselves available to
-            Repeat.gg for publicity, advertising, and promotion activities.
+            Hornex.gg for publicity, advertising, and promotion activities.
           </TermsText>
           <TermsText>
-            Repeat.gg&nbsp;reserves the right to move entrants from the Contests
+            Hornex.gg&nbsp;reserves the right to move entrants from the Contests
             they have entered to substantially similar Contests in certain
-            situations determined by Repeat.gg in its sole discretion.
+            situations determined by Hornex.gg in its sole discretion.
           </TermsText>
           <TermsSubHeading>CONTEST PRIZES AND PROMOTIONS</TermsSubHeading>
           <TermsText>
@@ -383,13 +381,13 @@ export default function TermsAndConditions() {
             each individual Contest. Once Contest results are reviewed and
             graded, prizes are awarded. The scoring results of a Contest will
             not be changed regardless of any official statistics or scoring
-            adjustments made at later times or dates, except in Repeat.gg&quot;s
+            adjustments made at later times or dates, except in Hornex.gg&quot;s
             sole discretion.
           </TermsText>
           <TermsText>
-            Repeat.gg&nbsp;reserves the right, in its sole and absolute
+            Hornex.gg&nbsp;reserves the right, in its sole and absolute
             discretion, to deny any contestant the ability to participate in
-            head-to-head contests for any reason whatsoever. Further, Repeat.gg
+            head-to-head contests for any reason whatsoever. Further, Hornex.gg
             may, in its sole and absolute discretion, invalidate any
             head-to-head contest result for the purposes of preventing abusive
             and/or any unfair or potentially unlawful activity, or in the event
@@ -405,12 +403,12 @@ export default function TermsAndConditions() {
             are divided evenly amongst the participants that have tied.
           </TermsText>
           <TermsText>
-            Repeat.gg&nbsp;reserves the right, in its sole discretion, to cancel
+            Hornex.gg&nbsp;reserves the right, in its sole discretion, to cancel
             or suspend the contests (or any portion thereof) should virus, bugs,
             unauthorized human intervention, or other causes corrupt
             administration, security, fairness, integrity or proper operation of
             the contest (or any portion thereof) warrant doing so. Notification
-            of such changes may be provided by Repeat.gg to its customers but
+            of such changes may be provided by Hornex.gg to its customers but
             will not be required.
           </TermsText>
           <TermsSubHeading>WITHDRAWAL AND PAYMENT OF PRIZES</TermsSubHeading>
@@ -422,7 +420,7 @@ export default function TermsAndConditions() {
             appropriate tax forms and forms of identification including but not
             limited to a Driver&quot;s License, Proof of Residence, and/or any
             information relating to payment/deposit accounts as reasonably
-            requested by Repeat.gg in order to complete the withdrawal of
+            requested by Hornex.gg in order to complete the withdrawal of
             prizes.
           </TermsText>
           <TermsText>
@@ -433,7 +431,7 @@ export default function TermsAndConditions() {
             law) and/or appropriate tax forms and forms of identification
             including but not limited to a Driver&quot;s License, Proof of
             Residence, and/or any information relating to payment/deposit
-            accounts as reasonably requested by Repeat.gg in order to complete
+            accounts as reasonably requested by Hornex.gg in order to complete
             the withdrawal of prizes.
           </TermsText>
           <TermsText>
@@ -457,7 +455,7 @@ export default function TermsAndConditions() {
           <TermsText>
             Wire transfers to international accounts will be initiated in USD
             and at the spot rate offered by the banks at the time.
-            Repeat.gg&nbsp;derives no benefit from currency exchanges and will
+            Hornex.gg&nbsp;derives no benefit from currency exchanges and will
             not enter into any debate about various exchange rates offered.
           </TermsText>
           <TermsUnorderedList>
@@ -499,7 +497,7 @@ export default function TermsAndConditions() {
           </TermsText>
           <TermsText>
             Checks are sent to the full name and mailing address listed in your
-            Repeat.gg account at the time you make your withdraw request. If
+            Hornex.gg account at the time you make your withdraw request. If
             your check is sent to an incorrect name or mailing address, you will
             incur a fee to place a stop-payment order on this check.
           </TermsText>
@@ -518,39 +516,39 @@ export default function TermsAndConditions() {
           </TermsText>
           <TermsText>
             Promotional deposits, credits, and other bonuses may not be
-            withdrawn from a Repeat.gg account unless appropriate terms of the
+            withdrawn from a Hornex.gg account unless appropriate terms of the
             promotion are achieved first by the user.
           </TermsText>
           <TermsText>
             All taxes associated with the receipt of any prize are the sole
             responsibility of the winner. In the event that the awarding of any
             prizes to winners of Contests is challenged by any legal authority,
-            Repeat.gg reserves the right in its sole discretion to determine
+            Hornex.gg reserves the right in its sole discretion to determine
             whether or not to award such prizes.&nbsp;&nbsp;If Your total prizes
-            from Repeat.gg in any given year reach $600, and Your participation
-            occurred from within the U.S., Repeat.gg will request that You
+            from Hornex.gg in any given year reach $600, and Your participation
+            occurred from within the U.S., Hornex.gg will request that You
             submit Your social security number, and such other information as
-            Repeat.gg, in its sole discretion, may require in order to send You
+            Hornex.gg, in its sole discretion, may require in order to send You
             a Form 1099 in compliance with the U.S. federal income tax reporting
             requirements. Failure to provide Your social security number and
             other requested information at that time may result in termination
-            of Your Account and Site privileges by Repeat.gg and
-            Repeat.gg&quot;s inability to credit Your Account, distribute the
+            of Your Account and Site privileges by Hornex.gg and
+            Hornex.gg&quot;s inability to credit Your Account, distribute the
             balance of Your Account to You, or distribute any winnings to You in
             excess of $600.
           </TermsText>
           <TermsText>
             No substitution or transfer of prize is permitted, except that
-            Repeat.gg reserves the right to substitute a prize of equal value or
+            Hornex.gg reserves the right to substitute a prize of equal value or
             greater if the advertised prize is unavailable. All prizes are
             awarded “as is” and without warranty of any kind, express or implied
             (including, without limitation, any implied warranty of
             merchantability for a particular purpose).
           </TermsText>
           <TermsText>
-            Any withdrawal requests, after approved by Repeat.gg, will be
+            Any withdrawal requests, after approved by Hornex.gg, will be
             credited back to the same credit card or method of payment used to
-            deposit funds on the Website. Repeat.gg will only release
+            deposit funds on the Website. Hornex.gg will only release
             withdrawals to a different credit card or other payment method other
             than that which was used to make deposit(s) after the aggregate
             amount of such deposit(s) has already been released back to the
@@ -560,10 +558,10 @@ export default function TermsAndConditions() {
             TERMINATION AND EFFECT OF TERMINATION
           </TermsSubHeading>
           <TermsText>
-            In addition to any other legal or equitable remedy, Repeat.gg may,
+            In addition to any other legal or equitable remedy, Hornex.gg may,
             without prior notice, immediately revoke any or all of your rights
             granted hereunder. In such event, you will immediately cease all
-            access to and use of the Repeat.gg Website. Repeat.gg may revoke any
+            access to and use of the Hornex.gg Website. Hornex.gg may revoke any
             password(s) and/or account identification issued to you and deny you
             access to and use of the Website. Any such action shall not affect
             any rights and obligations arising prior thereto. All provisions of
@@ -675,14 +673,14 @@ export default function TermsAndConditions() {
             software, scripts, graphics, photos, sounds, music, videos,
             interactive features and the like and the trademarks, service marks
             and logos contained therein (the “Intellectual Property”), are owned
-            by or licensed to Repeat.gg, subject to copyright and other
+            by or licensed to Hornex.gg, subject to copyright and other
             intellectual property rights under United States and foreign laws
             and international conventions. Content on the Website is provided to
             you AS IS for your information and personal use only and may not be
             used, copied, reproduced, distributed, transmitted, broadcast,
             displayed, sold, licensed, or otherwise exploited for any other
             purposes whatsoever without the prior written consent of the
-            respective owners. Repeat.gg reserves all rights not expressly
+            respective owners. Hornex.gg reserves all rights not expressly
             granted in and to the Website and the Intellectual Property. You
             agree to not engage in the use, copying, or distribution of any of
             the Intellectual Property other than expressly permitted herein. If
@@ -698,7 +696,7 @@ export default function TermsAndConditions() {
             Some of the Services may allow you to submit or transmit audio,
             video, text, or other materials (collectively, “User Submissions”)
             to or through the Services. When you provide User Submissions, you
-            grant to Repeat.gg, its parents, subsidiaries, affiliates, and
+            grant to Hornex.gg, its parents, subsidiaries, affiliates, and
             partners a non-exclusive, worldwide, royalty-free, fully
             sublicenseable license to use, distribute, edit, display, archive,
             publish, sublicense, perform, reproduce, make available, transmit,
@@ -713,10 +711,10 @@ export default function TermsAndConditions() {
           <TermsText>
             In addition, you agree that any User Submissions you submit shall
             not contain any material that is, in the sole and absolute
-            discretion of Repeat.gg, inappropriate, obscene, vulgar, unlawful,
+            discretion of Hornex.gg, inappropriate, obscene, vulgar, unlawful,
             or otherwise objectionable (hereinafter, “Prohibited Content”).
             Posting of any Prohibited Content, in addition to any and all other
-            rights and remedies available to Repeat.gg, may result in account
+            rights and remedies available to Hornex.gg, may result in account
             suspension or termination.
           </TermsText>
           <TermsText>
@@ -751,7 +749,7 @@ export default function TermsAndConditions() {
           </TermsText>
           <TermsText>
             You represent and warrant that you have all rights necessary to
-            grant to Repeat.gg the license above and that none of your User
+            grant to Hornex.gg the license above and that none of your User
             Submissions are defamatory, violate any rights of third parties
             (including intellectual property rights or rights of publicity or
             privacy), or violate applicable law.
@@ -770,7 +768,7 @@ export default function TermsAndConditions() {
             appointed by the American Arbitration Association (“AAA”) in
             accordance with its then governing rules and procedures, including
             the Supplementary Procedures for Consumer-Related Disputes, where
-            applicable. In agreeing to arbitrate all Claims, you and Repeat.gg
+            applicable. In agreeing to arbitrate all Claims, you and Hornex.gg
             waive all rights to a trial by jury in any action or proceeding
             involving any Claim. The arbitration shall be held in California,
             and judgment on the award rendered by the arbitrator may be entered
@@ -792,7 +790,7 @@ export default function TermsAndConditions() {
             Any and all claims shall be arbitrated on an individual basis only
             and shall not be consolidated or joined with or in any arbitration
             or other proceeding involving a Claim of any other party. You and
-            Repeat.gg agree that the arbitrator shall have no authority to
+            Hornex.gg agree that the arbitrator shall have no authority to
             arbitrate any Claim as a class action or in any other form other
             than on an individual basis.
           </TermsText>
@@ -802,7 +800,7 @@ export default function TermsAndConditions() {
             shall be the courts of competent jurisdiction sitting within
             California (the “Forum”), and the parties hereby waive any argument
             that any such court does not have personal jurisdiction or that the
-            Forum is not appropriate or convenient; (b) you and Repeat.gg waive
+            Forum is not appropriate or convenient; (b) you and Hornex.gg waive
             any and all rights to trial by jury with respect to any Claims.
           </TermsText>
           <TermsText>
@@ -817,7 +815,7 @@ export default function TermsAndConditions() {
           <TermsText>
             These Terms of Use shall be governed by the internal substantive
             laws of California, without respect to its conflict of laws
-            principles. Any claim or dispute between you and Repeat.gg that
+            principles. Any claim or dispute between you and Hornex.gg that
             arises in whole or in part from the Terms of Use, the Website or any
             Contest shall be decided exclusively by a court of competent
             jurisdiction located in California.
@@ -826,7 +824,7 @@ export default function TermsAndConditions() {
             Nothing in the Terms of Use shall create or confer any rights or
             other benefits in favor of any third parties except as specifically
             provided herein. By participating in any Contest on the Website, you
-            agree to indemnify, protect, defend and hold harmless Repeat.gg, its
+            agree to indemnify, protect, defend and hold harmless Hornex.gg, its
             parents, subsidiaries, affiliates and divisions, and their
             respective directors, officers, employees, agents and
             representatives (the “Repeat Entities”), from and against any and
@@ -840,12 +838,12 @@ export default function TermsAndConditions() {
             connected with your use of the Website, any payment methods used,
             any funding of your account, and/or your participation in any
             Contest. The Website may contain links to third party websites that
-            are not owned or controlled by Repeat.gg. Repeat.gg has no control
+            are not owned or controlled by Hornex.gg. Hornex.gg has no control
             over, and assumes no responsibility for, the content, privacy
             policies, or practices of any third-party websites. In addition,
-            Repeat.gg will not and cannot censor or edit the content of any
+            Hornex.gg will not and cannot censor or edit the content of any
             third-party site. By using the Website, you expressly relieve
-            Repeat.gg from any and all liability arising from your use of any
+            Hornex.gg from any and all liability arising from your use of any
             third-party website. Accordingly, we encourage you to be aware when
             you leave the Website and to read the terms and conditions and
             privacy policy of each other website that you visit.
@@ -853,13 +851,13 @@ export default function TermsAndConditions() {
           <TermsText>
             Nothing in the Terms of Use shall create or be deemed to create a
             partnership, agency, trust arrangement, fiduciary relationship or
-            joint venture between you and Repeat.gg.
+            joint venture between you and Hornex.gg.
           </TermsText>
           <TermsText>
-            Third-party online publishers that refer users to the Repeat.gg
-            website shall not be responsible or liable for the Repeat.gg website
+            Third-party online publishers that refer users to the Hornex.gg
+            website shall not be responsible or liable for the Hornex.gg website
             or any of the content, software, or functions made available on, or
-            accessed through, or sent from, the Repeat.gg website.
+            accessed through, or sent from, the Hornex.gg website.
           </TermsText>
           <TermsText>
             If any provision of these Terms of Use is deemed invalid by a court
@@ -870,16 +868,16 @@ export default function TermsAndConditions() {
           <TermsText>
             No waiver of any term of these Terms of Use shall be deemed a
             further or continuing waiver of such term or any other term, and
-            Repeat.gg&quot; failure to assert any right or provision under these
+            Hornex.gg&quot; failure to assert any right or provision under these
             Terms of Use shall not constitute a waiver of such right or
             provision.
           </TermsText>
           <TermsText>
-            Repeat.gg&nbsp;reserves the right to amend these Terms of Use at any
+            Hornex.gg&nbsp;reserves the right to amend these Terms of Use at any
             time and without notice, and it is your responsibility to review
             these Terms of Use for any changes. If you continue to use the
             Services after we change the Terms of Use, you accept all changes.
-            The failure of Repeat.gg to comply with any provision of these Terms
+            The failure of Hornex.gg to comply with any provision of these Terms
             of Use due to an act of God, hurricane, war, fire, riot, earthquake,
             terrorism, act of public enemies, actions of governmental
             authorities outside of the control of the Company (excepting
@@ -887,8 +885,8 @@ export default function TermsAndConditions() {
             majeure event will not be considered a breach of these Terms of Use.
           </TermsText>
           <TermsText>
-            REPEAT.GG&nbsp;AND OTHER TRADEMARKS CONTAINED ON THE WEBSITE ARE
-            TRADEMARKS OR REGISTERED TRADEMARKS OF REPEAT.GG IN THE UNITED
+            HORNEX.GG&nbsp;AND OTHER TRADEMARKS CONTAINED ON THE WEBSITE ARE
+            TRADEMARKS OR REGISTERED TRADEMARKS OF HORNEX.GG IN THE UNITED
             STATES AND/OR OTHER COUNTRIES. THIRD PARTY TRADEMARKS, TRADE NAMES,
             PRODUCT NAMES AND LOGOS MAY BE THE TRADEMARKS OR REGISTERED
             TRADEMARKS OF THEIR RESPECTIVE OWNERS. YOU MAY NOT REMOVE OR ALTER
@@ -966,7 +964,7 @@ export default function TermsAndConditions() {
             ability.&nbsp;
           </TermsText>
           <TermsText>
-            Repeat.gg will remove feedback ratings and comments:
+            Hornex.gg will remove feedback ratings and comments:
           </TermsText>
 
           <TermsUnorderedList>
@@ -976,7 +974,7 @@ export default function TermsAndConditions() {
             </li>
             <li>upon mutual agreement of each User; or&nbsp;</li>
             <li>
-              if Repeat.gg is legally obligated by court order or Judgment, or
+              if Hornex.gg is legally obligated by court order or Judgment, or
               pursuant to a settlement agreement resolving a lawsuit.&nbsp;
             </li>
           </TermsUnorderedList>
@@ -1011,7 +1009,7 @@ export default function TermsAndConditions() {
           </TermsText>
           <TermsUnorderedList>
             <li>
-              Repeat.gg is provided with a valid court order finding that the
+              Hornex.gg is provided with a valid court order finding that the
               disputed feedback or ratings are slanderous, libellous, defamatory
               or otherwise illegal.
             </li>
@@ -1033,7 +1031,7 @@ export default function TermsAndConditions() {
             <li>The feedback or rating contains links or scripts.</li>
             <li>
               Feedback or ratings posted or submitted by a User who provided
-              Repeat.gg with false contact information and could not be
+              Hornex.gg with false contact information and could not be
               contacted.&nbsp;
             </li>
             <li>
@@ -1055,18 +1053,18 @@ export default function TermsAndConditions() {
             privileges, Account suspension and/or feedback or rating removal.
             Negative feedback or ratings intended for another User will be
             considered for removal only in situations where the User responsible
-            for the mistaken posting informs Repeat.gg of the error and has
+            for the mistaken posting informs Hornex.gg of the error and has
             already placed the same feedback for the correct User.
           </TermsText>
           <TermsText>
-            Repeat.gg&nbsp;isn&quot;t endorsed by Riot Games and doesn&quot;t
+            Hornex.gg isn&lsquot;t endorsed by Riot Games and doesn&lsquot;t
             reflect the views or opinions of Riot Games or anyone officially
             involved in producing or managing League of Legends. League of
             Legends and Riot Games are trademarks or registered trademarks of
             Riot Games, Inc. League of Legends © Riot Games, Inc.
           </TermsText>
           <TermsText>
-            Valve Corporation is not affiliated with Repeat.gg in any way.
+            Valve Corporation is not affiliated with Hornex.gg in any way.
             Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda
             logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo,
             Opposing Force, Day of Defeat, the Day of Defeat logo,

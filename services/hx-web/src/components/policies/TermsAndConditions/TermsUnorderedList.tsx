@@ -1,23 +1,23 @@
 import classnames from "classnames";
 import React from "react";
 
-interface TermsSubHeadingProps {
+interface TermsUnorderedListProps {
   className?: string;
   children: React.ReactNode;
 }
 
-export const TermsSubHeading: React.FC<TermsSubHeadingProps> = ({
+export const TermsUnorderedList: React.FC<TermsUnorderedListProps> = ({
   children,
   className
 }) => {
   return (
-    <h4
+    <ul
       className={classnames(
-        "pt-2 text-sm font-bold text-gray-400 md:pt-4 md:text-base",
+        "list-disc p-2 pl-8 text-sm font-bold",
         className
       )}
     >
       {children}
-    </h4>
+    </ul>
   );
 };

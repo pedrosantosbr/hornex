@@ -13,7 +13,7 @@ export const TermsText: React.FC<TermsTextProps> = ({
   return (
     <p
       className={classnames(
-        "indent-8 text-sm text-gray-400 md:text-base",
+        "indent-8 text-sm text-justify",
         className
       )}
     >

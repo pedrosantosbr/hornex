@@ -19,7 +19,7 @@ export function TournamentTab() {
   });
 
   return (
-    <div className="w-full rounded-xl bg-slate-800 shadow-highlight-100 sm:px-0">
+    <div className="w-full">
       <Tab.Group>
         <Tab.List className="mx-6 flex gap-4 overflow-auto border-b-2 border-slate-600 py-1 no-scrollbar sm:overflow-visible md:gap-10">
           {Object.keys(categories).map((category) => (
@@ -40,10 +40,7 @@ export function TournamentTab() {
         </Tab.List>
         <Tab.Panels>
           {Object.values(categories).map((component, idx) => (
-            <Tab.Panel
-              key={idx}
-              className={classNames("rounded-xl bg-slate-800")}
-            >
+            <Tab.Panel key={idx} className={classNames("rounded-xl")}>
               {component}
             </Tab.Panel>
           ))}

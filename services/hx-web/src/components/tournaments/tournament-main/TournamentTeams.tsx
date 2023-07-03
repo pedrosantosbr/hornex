@@ -154,7 +154,7 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
     <main className={classnames("m-auto flex max-w-5xl p-6", classNames)}>
       <section className="flex w-full flex-col gap-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3 xl:gap-4">
             {teams.map((team, index) => (
               <div
                 key={index}
@@ -178,9 +178,7 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
                       key={i}
                       className={classnames(
                         "grid grid-cols-6 justify-items-center rounded-md p-2 text-xs",
-                        i % 2 === 0
-                          ? "bg-slate-900 shadow-highlight-100"
-                          : "ring-1 ring-inset ring-slate-700"
+                        i % 2 === 0 ? "" : "ring-1 ring-inset ring-slate-700"
                       )}
                     >
                       <span className="col-span-3 place-self-start text-sky-200">

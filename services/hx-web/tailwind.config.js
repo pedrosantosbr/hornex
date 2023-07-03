@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+const defaultTheme = require("tailwindcss/defaultTheme");
 const { fontSize } = require("./src/app/theme/fontStyles");
 
 module.exports = {
@@ -10,13 +11,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: [
-        "Inter var, sans-serif",
-        {
-          fontFeatureSettings: '"cv11", "ss01"',
-          fontVariationSettings: '"opsz" 32',
-        },
-      ],
+      sans: ["Inter var", ...defaultTheme.fontFamily.sans],
     },
     fontSize,
     extend: {

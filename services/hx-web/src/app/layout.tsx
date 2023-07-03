@@ -1,7 +1,6 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Head from "./navbar";
 import classnames from "classnames";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 
@@ -20,7 +19,7 @@ export default function RootLayout({
       <body
         className={classnames(
           inter.className,
-          "font-body bg-slate-900 text-slate-400"
+          "font-body bg-slate-950 text-slate-400"
         )}
       >
         {children}

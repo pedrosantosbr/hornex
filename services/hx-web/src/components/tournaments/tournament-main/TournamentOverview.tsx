@@ -1,9 +1,9 @@
 import classnames from "classnames";
 import Image from "next/image";
-import connect from "@/assets/images/connect.jpg";
-import graphs from "@/assets/images/graphs.jpg";
-import infinity from "@/assets/images/infinity.jpg";
-import award from "@/assets/images/award.jpg";
+import connect from "@/assets/images/connect.webp";
+import graphs from "@/assets/images/graphs.webp";
+import infinity from "@/assets/images/infinity.png";
+import award from "@/assets/images/award.webp";
 import {
   ClockIcon,
   MapPinIcon,

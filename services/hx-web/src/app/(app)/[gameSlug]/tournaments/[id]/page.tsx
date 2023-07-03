@@ -4,7 +4,7 @@ import Image from "next/image";
 import classnames from "classnames";
 import {
   CalendarDaysIcon,
-  CurrencyDollarIcon,
+  CurrencyDollarIcon
 } from "@heroicons/react/20/solid";
 import Button from "@/components/ui/button/button";
 
@@ -13,8 +13,10 @@ import TournamentCountdown from "@/components/tournaments/TournamentCountdown";
 import TournamentFooter from "@/components/tournaments/TournamentFooter";
 import {
   TournamentMain,
-  TournamentTab,
+  TournamentTab
 } from "@/components/tournaments/tournament-main";
+import UserCard from "@/components/ui/user-card";
+import face from "@/assets/images/face.jpg";
 
 type TournamentProps = {
   params: {
@@ -25,6 +27,11 @@ type TournamentProps = {
 export default function Tournament({ params }: TournamentProps) {
   const [isJoined, setJoin] = useState(false);
   const joinTournament = () => setJoin(!isJoined);
+
+  const [creator] = useState({
+    name: "@ShadowSlayer",
+    logo: face
+  });
 
   return (
     <>
@@ -43,11 +50,24 @@ export default function Tournament({ params }: TournamentProps) {
               <div className="block">
                 <h2
                   data-docsearch-ignore="true"
-                  className="mb-3 text-xl font-bold tracking-tight text-slate-900 dark:text-slate-200"
+                  className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-200"
                 >
                   Tournament Name
                 </h2>
-                <div className="text-xs text-gray-400">Created by</div>
+                <span className="text-sm text-slate-500">
+                  {new Date().toLocaleDateString("en-US", {
+                    dateStyle: "full"
+                  })}
+                </span>
+                <div className="flex items-center gap-1 text-xs text-gray-400">
+                  <h3 className="text-heading-style uppercase text-gray-900 dark:text-white">
+                    Created By
+                  </h3>
+                  <UserCard
+                    item={creator}
+                    className="b rounded-lg p-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                  />
+                </div>
                 <div className="py-6">
                   <ol className="relative ml-4 border-l border-gray-200 text-gray-500 dark:border-gray-700 dark:text-gray-400">
                     <li className="mb-7 ml-3">

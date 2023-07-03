@@ -4,7 +4,7 @@ import { Tab } from "@headlessui/react";
 import {
   TournamentRules,
   TournamentOverview,
-  TournamentTeams,
+  TournamentTeams
 } from "@/components/tournaments/tournament-main";
 
 function classNames(...classes: string[]) {
@@ -15,13 +15,13 @@ export function TournamentTab() {
   let [categories] = useState({
     Overview: <TournamentOverview />,
     Teams: <TournamentTeams />,
-    Rules: <TournamentRules />,
+    Rules: <TournamentRules />
   });
 
   return (
-    <div className="w-full">
+    <div className="flex w-full flex-col gap-6">
       <Tab.Group>
-        <Tab.List className="mx-6 flex gap-4 overflow-auto border-b-2 border-slate-600 py-1 no-scrollbar sm:overflow-visible md:gap-10">
+        <Tab.List className="flex gap-4 overflow-auto border-b-2 border-slate-600 py-1 no-scrollbar sm:overflow-visible md:gap-10">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
@@ -40,9 +40,7 @@ export function TournamentTab() {
         </Tab.List>
         <Tab.Panels>
           {Object.values(categories).map((component, idx) => (
-            <Tab.Panel key={idx} className={classNames("rounded-xl")}>
-              {component}
-            </Tab.Panel>
+            <Tab.Panel key={idx}>{component}</Tab.Panel>
           ))}
         </Tab.Panels>
       </Tab.Group>

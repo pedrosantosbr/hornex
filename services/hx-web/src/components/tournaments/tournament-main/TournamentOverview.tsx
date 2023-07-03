@@ -8,7 +8,7 @@ import {
   ClockIcon,
   MapPinIcon,
   ServerStackIcon,
-  TrophyIcon,
+  TrophyIcon
 } from "@heroicons/react/20/solid";
 import { PodiumIcon } from "@/components/ui/icons/podium-icon";
 
@@ -17,69 +17,66 @@ interface TournamentOverviewProps {
 }
 
 export const TournamentOverview: React.FC<TournamentOverviewProps> = ({
-  classNames,
+  classNames
 }) => {
   const howItWorksCards = [
     {
       image: connect,
       title: "Connect & Join",
       description:
-        "Once you've joined a Tournament, all you have to do is play games as you usually do",
+        "Once you've joined a Tournament, all you have to do is play games as you usually do"
     },
     {
       image: graphs,
       title: "Automated Results",
       description:
-        "Repeat is a unique platform because we track your results automatically - you just have to connect your account",
+        "Repeat is a unique platform because we track your results automatically - you just have to connect your account"
     },
     {
       image: infinity,
       title: "Unlimited Play",
       description:
-        "Did you know you can play multiple Tournaments at the same time? Actually you can play as much as you want",
+        "Did you know you can play multiple Tournaments at the same time? Actually you can play as much as you want"
     },
     {
       image: award,
       title: "Get Rewarded",
       description:
-        "Once a Tournament has ended you are rewarded based on your score which is based on the games you've played",
-    },
+        "Once a Tournament has ended you are rewarded based on your score which is based on the games you've played"
+    }
   ];
 
   const tournamentDetails = [
     {
       icon: ClockIcon,
       title: "Score Update",
-      description: "Every 90 minutes",
+      description: "Every 90 minutes"
     },
     {
       icon: PodiumIcon,
       title: "Total Score",
-      description: "Top 10 games",
+      description: "Top 10 games"
     },
     {
       icon: MapPinIcon,
       title: "Regions",
-      description: "All Regions",
+      description: "All Regions"
     },
     {
       icon: ServerStackIcon,
       title: "Servers",
-      description: "All Servers",
+      description: "All Servers"
     },
     {
       icon: TrophyIcon,
       title: "Modes",
-      description: "Ranked",
-    },
+      description: "Ranked"
+    }
   ];
 
   return (
     <main
-      className={classnames(
-        "m-auto flex max-w-5xl flex-col gap-6 p-6",
-        classNames
-      )}
+      className={classnames("m-auto flex max-w-5xl flex-col gap-6", classNames)}
     >
       <section className="flex w-full flex-col gap-4">
         <div>

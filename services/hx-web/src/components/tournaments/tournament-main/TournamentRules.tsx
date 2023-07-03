@@ -30,10 +30,10 @@ const RulesSubHeading = ({ children, className }: RulesSubHeadingProps) => (
 );
 
 export const TournamentRules: React.FC<TournamentRulesProps> = ({
-  classNames,
+  classNames
 }) => {
   return (
-    <main className={classnames("p-6", classNames)}>
+    <main className={classnames("px-2", classNames)}>
       <h2 className="m-auto max-w-4xl text-left text-base font-bold tracking-tighter md:text-xl">
         Tournament Rules
       </h2>

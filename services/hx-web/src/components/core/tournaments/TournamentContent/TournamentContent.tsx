@@ -6,11 +6,9 @@ interface TournamentMainProps {
   children: React.ReactNode;
 }
 
-export const TournamentMain: React.FC<TournamentMainProps> = ({
+export const TournamentContent: React.FC<TournamentMainProps> = ({
   children,
-  classNames,
+  classNames
 }) => {
-  return (
-    <main className={classnames("mt-6 flex", classNames)}>{children}</main>
-  );
+  return <div className={classnames("mt-6 flex", classNames)}>{children}</div>;
 };

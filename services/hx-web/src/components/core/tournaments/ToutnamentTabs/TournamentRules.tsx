@@ -33,7 +33,7 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
   classNames
 }) => {
   return (
-    <main className={classnames("px-2", classNames)}>
+    <div className={classnames("px-2", classNames)}>
       <h2 className="m-auto max-w-4xl text-left text-base font-bold tracking-tighter md:text-xl">
         Tournament Rules
       </h2>
@@ -217,6 +217,6 @@ export const TournamentRules: React.FC<TournamentRulesProps> = ({
         </RulesText>
         <RulesText>*All the above terms and conditions also apply*</RulesText>
       </section>
-    </main>
+    </div>
   );
 };

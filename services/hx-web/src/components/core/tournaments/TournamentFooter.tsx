@@ -12,12 +12,12 @@ interface TournamentFooterProps {
 export default function TournamentFooter({
   className,
   isJoined,
-  joinTournament,
+  joinTournament
 }: TournamentFooterProps) {
   return (
     <div
       className={classnames(
-        "sticky bottom-0 z-10 flex-shrink-0 border-t-2 border-slate-700 pt-2",
+        "sticky bottom-0 z-10 flex-shrink-0 border-t-2 border-slate-700 pb-4 pt-2",
         className
       )}
     >

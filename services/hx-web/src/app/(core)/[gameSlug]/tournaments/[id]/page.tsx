@@ -1,13 +1,11 @@
 "use client";
 import { useState } from "react";
 import TournamentFooter from "@/components/core/tournaments/TournamentFooter";
-import {
-  TournamentMain,
-  TournamentTab,
-} from "@/components/core/tournaments/TournamentContent";
+import { TournamentContent } from "@/components/core/tournaments/TournamentContent";
 import UserCard from "@/components/ui/UserCard";
 import face from "@/assets/images/face.jpg";
 import TournamentPhases from "@/components/core/tournaments/TournamentPhases/TournamentPhases";
+import { TournamentTabs } from "@/components/core/tournaments/ToutnamentTabs";
 
 type TournamentProps = {
   params: {
@@ -21,7 +19,7 @@ export default function Tournament({ params }: TournamentProps) {
 
   const [creator] = useState({
     name: "@ShadowSlayer",
-    logo: face,
+    logo: face
   });
 
   return (
@@ -35,19 +33,19 @@ export default function Tournament({ params }: TournamentProps) {
             Informations about tournament
           </span>
           {/* left side wraper */}
-          <TournamentMain>
-            <TournamentTab />
-          </TournamentMain>
+          <TournamentContent>
+            <TournamentTabs />
+          </TournamentContent>
         </div>
 
-        <div className="right-0 top-0 flex h-screen flex-col pb-8 md:fixed md:w-[380px] md:pr-8 md:pt-24">
+        <div className="right-0 top-0 flex flex-col pb-8 md:fixed md:h-screen md:w-[380px] md:pr-8 md:pt-24">
           {/* sidebar */}
           <TournamentPhases />
         </div>
       </div>
 
       <TournamentFooter
-        className="bg-slate-900 pb-4 md:hidden"
+        className="-m-4 bg-slate-950 p-3 md:hidden"
         isJoined={isJoined}
         joinTournament={joinTournament}
       />

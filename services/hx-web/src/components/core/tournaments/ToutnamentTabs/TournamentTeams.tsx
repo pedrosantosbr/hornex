@@ -5,7 +5,7 @@ interface TournamentTeamsProps {
 }
 
 export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
-  classNames,
+  classNames
 }) => {
   const teams = [
     {
@@ -15,33 +15,33 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
           username: "ShadowSlayer",
           elo: "Diamond",
           wins: 15,
-          losses: 5,
+          losses: 5
         },
         {
           username: "BlazeFire",
           elo: "Platinum",
           wins: 10,
-          losses: 8,
+          losses: 8
         },
         {
           username: "MysticSorcerer",
           elo: "Gold",
           wins: 12,
-          losses: 6,
+          losses: 6
         },
         {
           username: "DragonFang",
           elo: "Silver",
           wins: 8,
-          losses: 10,
+          losses: 10
         },
         {
           username: "StarGazer",
           elo: "Bronze",
           wins: 210,
-          losses: 150,
-        },
-      ],
+          losses: 150
+        }
+      ]
     },
     {
       name: "Titans",
@@ -50,33 +50,33 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
           username: "WarriorKing",
           elo: "Platinum",
           wins: 12,
-          losses: 7,
+          losses: 7
         },
         {
           username: "StormBreaker",
           elo: "Gold",
           wins: 11,
-          losses: 9,
+          losses: 9
         },
         {
           username: "Thunderstrike",
           elo: "Silver",
           wins: 9,
-          losses: 11,
+          losses: 11
         },
         {
           username: "IronClad",
           elo: "Bronze",
           wins: 6,
-          losses: 14,
+          losses: 14
         },
         {
           username: "BattleMaiden",
           elo: "Iron",
           wins: 4,
-          losses: 16,
-        },
-      ],
+          losses: 16
+        }
+      ]
     },
     {
       name: "Legends",
@@ -85,33 +85,33 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
           username: "EternalChampion",
           elo: "Diamond",
           wins: 13,
-          losses: 7,
+          losses: 7
         },
         {
           username: "MythicalSword",
           elo: "Platinum",
           wins: 9,
-          losses: 11,
+          losses: 11
         },
         {
           username: "ArcaneMage",
           elo: "Gold",
           wins: 11,
-          losses: 9,
+          losses: 9
         },
         {
           username: "ValiantKnight",
           elo: "Silver",
           wins: 7,
-          losses: 13,
+          losses: 13
         },
         {
           username: "MagicWarden",
           elo: "Bronze",
           wins: 6,
-          losses: 14,
-        },
-      ],
+          losses: 14
+        }
+      ]
     },
     {
       name: "Guardians",
@@ -120,38 +120,38 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
           username: "SwiftArrow",
           elo: "Platinum",
           wins: 14,
-          losses: 6,
+          losses: 6
         },
         {
           username: "IronShield",
           elo: "Gold",
           wins: 10,
-          losses: 10,
+          losses: 10
         },
         {
           username: "StormDancer",
           elo: "Silver",
           wins: 8,
-          losses: 12,
+          losses: 12
         },
         {
           username: "SoulBinder",
           elo: "Bronze",
           wins: 7,
-          losses: 13,
+          losses: 13
         },
         {
           username: "GuardianSpirit",
           elo: "Iron",
           wins: 3,
-          losses: 17,
-        },
-      ],
-    },
+          losses: 17
+        }
+      ]
+    }
   ];
 
   return (
-    <main className={classnames("m-auto flex max-w-5xl", classNames)}>
+    <div className={classnames("m-auto flex max-w-5xl", classNames)}>
       <section className="flex w-full flex-col gap-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3 xl:gap-4">
@@ -183,7 +183,7 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
                       <li
                         key={i}
                         className={classnames(
-                          "grid grid-cols-6 even:ring-1 even:ring-inset even:ring-slate-700 justify-items-center rounded-md p-2 text-xs",
+                          "grid grid-cols-6 justify-items-center rounded-md p-2 text-xs even:ring-1 even:ring-inset even:ring-slate-700"
                         )}
                       >
                         <span className="col-span-3 place-self-start text-sky-200">
@@ -202,6 +202,6 @@ export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 };

@@ -32,7 +32,7 @@ const HeaderRightArea: FC = () => {
 
 export default function Navbar() {
   return (
-    <nav className="fixed z-50 flex h-16 w-full border-b border-slate-800 py-2">
+    <nav className="fixed z-50 flex h-16 w-full border-b border-slate-800 bg-slate-900 py-2 shadow-2xl">
       <div className="z-40 ml-auto flex justify-end px-6 lg:px-8">
         <HeaderRightArea />
       </div>

@@ -110,7 +110,10 @@ export default function GamePage({ params }: GamePageProps) {
         <div className="">
           <ul className="grid grid-cols-1 gap-6 lg:grid-cols-4 lg:gap-8">
             {new Array(4).fill(null).map((_, i) => (
-              <li className="divide-y divide-slate-700 rounded-lg bg-slate-800 shadow-highlight-all">
+              <li
+                key={i}
+                className="divide-y divide-slate-700 rounded-lg bg-slate-800 shadow-highlight-all"
+              >
                 <figure>
                   <Image
                     alt="league of legends thumb"
@@ -119,7 +122,7 @@ export default function GamePage({ params }: GamePageProps) {
                   />
                 </figure>
                 <div className="p-4">
-                  <h4 className="mb-2 text-sm font-semibold tracking-tighter text-white">
+                  <h4 className="mb-2 font-satoshi text-sm font-semibold tracking-tighter text-white">
                     AVDU#0001
                   </h4>
                   <ul className="flex flex-wrap">

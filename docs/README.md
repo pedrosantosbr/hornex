@@ -23,7 +23,7 @@ the tournament fee, they won't be able to join.
 
 ### **`# Team Member join in tournament`**
 
-***Scneario: The first user join in a tournament***
+***Scenario: The first user join in a tournament***
 
 **Given** I am a team member  
 **And** No one has joined in a tournament yet  
@@ -31,7 +31,7 @@ the tournament fee, they won't be able to join.
 **Then** I should be included to the tournament invite stage  
 **And** All the others member of my team should be notified  
 
-***Scneario: The second user join in a tournament***
+***Scenario: The second user join in a tournament***
 
 **Given** I am a team member  
 **When** I click to join in a tournament  

@@ -26,7 +26,7 @@ export const TournamentOverview: React.FC<TournamentOverviewProps> = ({
     }, */
     {
       icon: TeamIcon,
-      title: "Team",
+      title: "Teams",
       description: "16 Teams Compete"
     },
     {
@@ -95,17 +95,17 @@ export const TournamentOverview: React.FC<TournamentOverviewProps> = ({
         </div>
       </div>
 
-      <section className="mt-3 flex w-full flex-col gap-4 rounded-xl">
-        <ul className="grid grid-cols-2 gap-4 rounded-lg lg:grid-cols-4">
+      <section className="mt-4 flex w-full flex-col md:gap-4">
+        <ul className="grid grid-cols-2 gap-4 rounded-lg md:gap-6 lg:grid-cols-4">
           {tournamentDetails.map((detail) => (
             <li
               key={detail.title}
-              className="flex flex-col gap-4 rounded-lg bg-slate-800 p-4"
+              className="flex gap-2 rounded-lg md:gap-4 md:border md:border-slate-800 md:p-4"
             >
               <div className="">
-                <detail.icon className="w-7 fill-slate-400" />
+                <detail.icon className="w-8 rounded-full bg-gradient-to-br from-green-400 to-blue-600 fill-white p-2 hover:bg-gradient-to-bl md:w-10" />
               </div>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col">
                 <h5 className="text-sm font-bold text-slate-300">
                   {detail.title}
                 </h5>

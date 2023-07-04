@@ -26,7 +26,7 @@ export default function Tournament({ params }: TournamentProps) {
 
   return (
     <>
-      <div className="flex flex-col gap-2 md:grid md:grid-cols-[1fr_1fr_340px] md:gap-0">
+      <div className="flex flex-col gap-2 md:grid md:grid-cols-[1fr_1fr_380px] md:gap-0">
         <div className="col-span-2 pt-4 md:pt-8">
           <h4 className="text-2xl font-extrabold  tracking-tighter text-slate-300">
             Tourname Info
@@ -40,7 +40,7 @@ export default function Tournament({ params }: TournamentProps) {
           </TournamentMain>
         </div>
 
-        <div className="right-0 top-0 flex h-screen flex-col pb-8 md:fixed md:w-[340px] md:pr-8 md:pt-24">
+        <div className="right-0 top-0 flex h-screen flex-col pb-8 md:fixed md:w-[380px] md:pr-8 md:pt-24">
           {/* sidebar */}
           <TournamentPhases />
         </div>

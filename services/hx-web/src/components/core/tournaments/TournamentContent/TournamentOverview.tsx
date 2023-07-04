@@ -11,7 +11,7 @@ import {
   TrophyIcon,
 } from "@heroicons/react/20/solid";
 import { PodiumIcon } from "@/components/ui/Icons/podium-icon";
-import Card from "@/components/ui/Card/Card";
+import Card from "@/components/ui/Card";
 
 interface TournamentOverviewProps {
   classNames?: string;
@@ -76,10 +76,32 @@ export const TournamentOverview: React.FC<TournamentOverviewProps> = ({
   ];
 
   return (
-    <main
+    <div
       className={classnames("m-auto flex max-w-5xl flex-col gap-6", classNames)}
     >
-      <Card
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At veritatis
+        eaque laborum aliquam possimus et culpa natus iste quae voluptatem!
+      </p>
+      <section className="flex w-full flex-col gap-4 rounded-xl">
+        <ul className="grid grid-cols-1 rounded-lg lg:grid-cols-5">
+          {tournamentDetails.map((detail) => (
+            <li
+              key={detail.title}
+              className="flex flex-col gap-4 border-slate-800 p-2 "
+            >
+              <div className="rounded-lg bg-slate-800 p-4">
+                <detail.icon className="w-8 fill-slate-200" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <h5 className="text-sm text-slate-200">{detail.title}</h5>
+                <p className="text-xs">{detail.description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+      {/* <Card
         title="How it works"
         subtitle="Fully Automated Tournament Experience"
       >
@@ -122,7 +144,7 @@ export const TournamentOverview: React.FC<TournamentOverviewProps> = ({
             ))}
           </ul>
         </section>
-      </Card>
-    </main>
+      </Card> */}
+    </div>
   );
 };

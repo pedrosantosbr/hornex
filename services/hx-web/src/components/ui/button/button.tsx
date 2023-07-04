@@ -27,12 +27,7 @@ const variants: Record<VariantNames, string[]> = {
   transparent: ["bg-transparent hover:bg-gray-50 dark:hover:bg-gray-800"],
 };
 const colors: Record<ColorNames, string[]> = {
-  primary: [
-    "text-brand",
-    "bg-brand",
-    "border-slate-700",
-    "bg-gradient-to-br from-slate-950 to-slate-800",
-  ],
+  primary: ["text-slate-700", "bg-slate-700", "border-slate-700"],
   white: ["text-gray-900", "bg-white", "border-white"],
   gray: [
     "text-gray-900",

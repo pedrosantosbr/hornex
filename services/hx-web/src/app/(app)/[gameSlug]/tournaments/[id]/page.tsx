@@ -7,11 +7,16 @@ import {
   CurrencyDollarIcon,
 } from "@heroicons/react/20/solid";
 import Button from "@/components/ui/button/button";
-import TournamentTab from "@/components/tournaments/TournamentTab";
 
 import { useState } from "react";
 import TournamentCountdown from "@/components/tournaments/TournamentCountdown";
 import TournamentFooter from "@/components/tournaments/TournamentFooter";
+import {
+  TournamentMain,
+  TournamentTab,
+} from "@/components/tournaments/tournament-main";
+import UserCard from "@/components/ui/user-card";
+import face from "@/assets/images/face.jpg";
 
 type TournamentProps = {
   params: {
@@ -23,27 +28,46 @@ export default function Tournament({ params }: TournamentProps) {
   const [isJoined, setJoin] = useState(false);
   const joinTournament = () => setJoin(!isJoined);
 
+  const [creator] = useState({
+    name: "@ShadowSlayer",
+    logo: face,
+  });
+
   return (
-    <div className="grid grid-cols-3 gap-6">
-      <div className="col-span-2 border-green-500">
-        {/* left side wraper */}
-        <div className="flex pt-8">
-          <TournamentTab />
+    <>
+      <div className="flex flex-col gap-4 md:grid md:grid-cols-[1fr_1fr_380px] md:gap-0">
+        <div className="col-span-2 border-green-500">
+          {/* left side wraper */}
+          <TournamentMain>
+            <TournamentTab />
+          </TournamentMain>
         </div>
-      </div>
-      <div className="col-span-1">
-        <div className="fixed right-0 top-0 flex h-screen w-[380px] flex-col  justify-between pb-8 pr-8 pt-24">
+
+        <div className="right-0 top-0 flex h-screen flex-col justify-between bg-slate-900 pb-8 md:fixed md:w-[380px] md:pr-8 md:pt-24">
           {/* sidebar */}
-          <div className="shadow-hi flex h-full flex-col justify-between  rounded-lg border-slate-700 bg-slate-800 p-8 shadow-highlight-100">
+          <div className="relative flex h-full flex-grow flex-col justify-between rounded-lg border-slate-700 p-8 shadow-highlight-100">
             {/* sidebar header */}
             <div className="block">
               <h2
                 data-docsearch-ignore="true"
-                className="mb-3 text-xl font-bold tracking-tight text-slate-900 dark:text-slate-200"
+                className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-200"
               >
                 Tournament Name
               </h2>
-              <div className="text-xs text-gray-400">Created by</div>
+              <span className="text-sm text-slate-500">
+                {new Date().toLocaleDateString("en-US", {
+                  dateStyle: "full",
+                })}
+              </span>
+              <div className="flex items-center gap-1 text-xs text-gray-400">
+                <h3 className="text-heading-style uppercase text-gray-900 dark:text-white">
+                  Created By
+                </h3>
+                <UserCard
+                  item={creator}
+                  className="b rounded-lg p-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                />
+              </div>
               <div className="py-6">
                 <ol className="relative ml-4 border-l border-gray-200 text-gray-500 dark:border-gray-700 dark:text-gray-400">
                   <li className="mb-7 ml-3">
@@ -147,60 +171,20 @@ export default function Tournament({ params }: TournamentProps) {
             </div>
 
             {/* sidebar footer */}
-            <div className="block border-t-2 border-slate-700 pt-6">
-              <div className="pb-3">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="col-span-auto border-r border-dashed border-slate-700">
-                    <h3 className="font-mono mb-2 font-medium  dark:text-slate-200  sm:text-sm">
-                      Prize pool
-                    </h3>
 
-                    <div className="flex items-center">
-                      <pre className="preroportional-nums mb-1 text-xl font-extrabold text-white">
-                        1.500,00
-                      </pre>
-                    </div>
-                    <span className="text-xs">BRL</span>
-                  </div>
-                  <div className="col-span-auto">
-                    <h3 className="mb-2 font-medium dark:text-slate-200  sm:text-sm">
-                      Starts in:
-                    </h3>
-                    <TournamentCountdown date={Date.now() + 4000000 * 40} />
-                  </div>
-                </div>
-              </div>
-
-              <div className="py-4">
-                <div className="flex flex-col">
-                  <div className="mb-2 flex justify-between">
-                    <span className="text-xs text-green-400">4/16 - Teams</span>
-                    <span className="text-xs font-bold uppercase italic text-green-400">
-                      open
-                    </span>
-                  </div>
-                  <div className="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-                    <div
-                      className={classnames(
-                        "h-2.5 rounded-full bg-green-600",
-                        "w-[70%]"
-                      )}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <Button
-                className="w-full"
-                shape="rounded"
-                onClick={joinTournament}
-                color="info"
-              >
-                {isJoined ? "Leave" : "Join"}
-              </Button>
-            </div>
+            <TournamentFooter
+              className="hidden md:block"
+              isJoined={isJoined}
+              joinTournament={joinTournament}
+            />
           </div>
         </div>
       </div>
-    </div>
+      <TournamentFooter
+        className="bg-slate-900 pb-4 md:hidden"
+        isJoined={isJoined}
+        joinTournament={joinTournament}
+      />
+    </>
   );
 }

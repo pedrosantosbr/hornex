@@ -1,9 +1,5 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Head from "./navbar";
 import classnames from "classnames";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata = {
   title: "Create Next App",
@@ -17,12 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={classnames(
-          inter.className,
-          "font-body bg-slate-900 text-slate-400"
-        )}
-      >
+      <body className={classnames("bg-slate-950 font-inter text-slate-400")}>
         {children}
       </body>
     </html>

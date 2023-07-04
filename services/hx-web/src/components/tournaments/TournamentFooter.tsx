@@ -16,7 +16,7 @@ export default function TournamentFooter({
   return (
     <div
       className={classnames(
-        "sticky bottom-0 z-10 flex-shrink-0 border-t-2 border-slate-700 bg-slate-800 pt-6",
+        "sticky bottom-0 z-10 flex-shrink-0 border-t-2 border-slate-700 pt-6",
         className
       )}
     >
@@ -28,7 +28,7 @@ export default function TournamentFooter({
             </h3>
 
             <div className="flex items-center">
-              <pre className="preroportional-nums mb-1 text-xl font-extrabold text-white">
+              <pre className="mb-1 text-xl font-extrabold text-white font-inter">
                 1.500,00
               </pre>
             </div>
@@ -62,10 +62,10 @@ export default function TournamentFooter({
         </div>
       </div>
       <Button
-        className="w-full"
+        className="w-full hover:bg-red-500"
         shape="rounded"
         onClick={joinTournament}
-        color="info"
+        color="primary"
       >
         {isJoined ? "Leave" : "Join"}
       </Button>

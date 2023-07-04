@@ -11,12 +11,16 @@ export type CardProps = {
 
 const Card = ({ children, className, ...rest }: CardProps) => {
   return (
-    <div className={classNames(styles.card, className)} {...rest}>
-      <div className="border-b border-slate-800 p-4">
-        <Title>{rest.title}</Title>
-        {rest.subtitle && <p className="text-sm">{rest.subtitle}</p>}
+    <div className={classNames("rounded-lg bg-slate-900", className)} {...rest}>
+      <div className="bg rounded-t-lg border-b border-slate-800 bg-slate-900 px-4 py-3 shadow-highlight-100">
+        <h4 className="font-bold tracking-tighter text-slate-300">
+          {rest.title}
+        </h4>
+        {rest.subtitle && (
+          <p className="text-xs font-medium text-slate-400">{rest.subtitle}</p>
+        )}
       </div>
-      <div className="p-4 text-sm">{children}</div>
+      <div className="p-4">{children}</div>
     </div>
   );
 };

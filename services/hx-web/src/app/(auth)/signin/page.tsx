@@ -1,6 +1,6 @@
-import Button from "@/components/ui/button/button";
-import Input from "@/components/ui/form/input";
-import InputLabel from "@/components/ui/form/input-label";
+import Button from "@/components/ui/Button/button";
+import Input from "@/components/ui/Form/input";
+import InputLabel from "@/components/ui/Form/input-label";
 
 export default function SignInPage() {
   return (

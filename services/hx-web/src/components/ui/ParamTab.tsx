@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import cn from "classnames";
-import { ChevronDown } from "@/components/ui/icons/chevron-down";
+import { ChevronDown } from "@/components/ui/Icons/chevron-down";
 import { Tab, TabItem, TabPanels, TabPanel } from "@/components/ui/Tab";
 import { useBreakpoint } from "@/lib/hooks/use-breakpoint";
 import { useIsMounted } from "@/lib/hooks/use-is-mounted";

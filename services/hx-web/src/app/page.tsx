@@ -1,4 +1,4 @@
-import { GameList } from "@/components/games/GameList";
+import { GameList } from "@/components/core/games/GameList";
 import { Team } from "@/types/team";
 import LeagueOfLegendsThumb from "@/assets/images/games/league-of-legends.jpg";
 import CsGo from "@/assets/images/games/cs-go.jpg";

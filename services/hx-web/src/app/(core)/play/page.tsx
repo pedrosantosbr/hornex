@@ -1,16 +1,16 @@
 "use client";
-import Button from "@/components/ui/button/button";
-import InputLabel from "@/components/ui/form/input-label";
-import Input from "@/components/ui/form/input";
-import { ArrowLongLeftIcon } from "@/components/ui/icons/arrow-long-left-icon";
+import Button from "@/components/ui/Button/button";
+import InputLabel from "@/components/ui/Form/input-label";
+import Input from "@/components/ui/Form/input";
+import { ArrowLongLeftIcon } from "@/components/ui/Icons/arrow-long-left-icon";
 import Link from "next/link";
-import UserSearchList from "@/components/users/user-search-list";
-import BetPicker from "@/components/games/BetPicker";
+import UserSearchList from "@/components/core/users/user-search-list";
+import BetPicker from "@/components/core/games/BetPicker";
 import { Listbox, Transition } from "@headlessui/react";
-import { ChevronDown } from "@/components/ui/icons/chevron-down";
+import { ChevronDown } from "@/components/ui/Icons/chevron-down";
 import { useState } from "react";
-import { Ethereum } from "@/components/ui/icons/ethereum";
-import { CheckIcon } from "@/components/ui/icons/check-icon";
+import { Ethereum } from "@/components/ui/Icons/ethereum";
+import { CheckIcon } from "@/components/ui/Icons/check-icon";
 
 type PlayPageProps = {
   gameSlug: string;

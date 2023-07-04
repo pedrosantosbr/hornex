@@ -1,6 +1,6 @@
 "use client";
 import classnames from "classnames";
-import { ArrowLongLeftIcon } from "@/components/ui/icons/arrow-long-left-icon";
+import { ArrowLongLeftIcon } from "@/components/ui/Icons/arrow-long-left-icon";
 import Link from "next/link";
 
 import LolThumb from "@/assets/images/league-of-legends-thumb.png";

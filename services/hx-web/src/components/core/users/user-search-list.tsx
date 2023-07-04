@@ -1,9 +1,9 @@
 import { useState } from "react";
 import cn from "classnames";
-import { SearchIcon } from "@/components/ui/icons/search";
-import Input from "../ui/form/input";
-import { ProfileIcon } from "../ui/icons/profile-icon";
-import { XMarkIcon } from "../ui/icons/x-mark-icon";
+import { SearchIcon } from "@/components/ui/Icons/search";
+import Input from "../../ui/Form/input";
+import { ProfileIcon } from "../../ui/Icons/profile-icon";
+import { XMarkIcon } from "../../ui/Icons/x-mark-icon";
 
 export const collectionList = [
   {

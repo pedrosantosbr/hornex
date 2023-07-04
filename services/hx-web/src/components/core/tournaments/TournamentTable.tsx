@@ -3,8 +3,8 @@ import classnames from "classnames";
 import { useRouter } from "next/navigation";
 
 import LeagueOfLegendsThumb from "@/assets/images/games/league-of-legends.jpg";
-import Table from "../ui/table";
-import { EyeIcon } from "../ui/icons/eye-icon";
+import Table from "../../ui/Table";
+import { EyeIcon } from "../../ui/Icons/eye-icon";
 
 export type TournamentTableProps = {
   children: React.ReactNode;

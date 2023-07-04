@@ -1,7 +1,7 @@
-import ProfileMenuItem from "@/components/profile/ProfileMenuItem";
+import ProfileMenuItem from "@/components/core/profile/ProfileMenuItem";
 import { LinkButton } from "@/components/ui/LinkButton";
-import { EyeIcon } from "@/components/ui/icons/eye-icon";
-import { ProfileIcon } from "@/components/ui/icons/profile-icon";
+import { EyeIcon } from "@/components/ui/Icons/eye-icon";
+import { ProfileIcon } from "@/components/ui/Icons/profile-icon";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -16,9 +16,9 @@ const HeaderRightArea: FC = () => {
       </div> */}
       <div className="flex items-center border-r border-gray-700 px-4">
         <span className="mr-4 text-xs">0.00 BRL</span>
-        <LinkButton className="h-8 text-xs" href="/dashboard">
+        {/* <LinkButton className="h-8 text-xs" href="/dashboard">
           Deposit
-        </LinkButton>
+        </LinkButton> */}
       </div>
       <div className="flex items-center">
         <ProfileMenuItem />

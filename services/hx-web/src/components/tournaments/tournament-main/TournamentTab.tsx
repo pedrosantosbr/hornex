@@ -4,7 +4,7 @@ import { Tab } from "@headlessui/react";
 import {
   TournamentRules,
   TournamentOverview,
-  TournamentTeams
+  TournamentTeams,
 } from "@/components/tournaments/tournament-main";
 
 function classNames(...classes: string[]) {
@@ -15,21 +15,21 @@ export function TournamentTab() {
   let [categories] = useState({
     Overview: <TournamentOverview />,
     Teams: <TournamentTeams />,
-    Rules: <TournamentRules />
+    Rules: <TournamentRules />,
   });
 
   return (
     <div className="flex w-full flex-col gap-6">
       <Tab.Group>
-        <Tab.List className="flex gap-4 overflow-auto border-b-2 border-slate-600 py-1 no-scrollbar sm:overflow-visible md:gap-10">
+        <Tab.List className="flex gap-4 overflow-auto border-b border-slate-800 py-1 no-scrollbar sm:overflow-visible md:gap-10">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "-mb-1.5 py-2 text-sm font-medium text-slate-400 outline-none transition-colors hover:text-sky-400",
+                  "-mb-1.5 py-2 text-sm font-medium text-slate-400 outline-none transition-colors hover:text-red-400",
                   selected
-                    ? "border-b-2 border-sky-400 !text-sky-400"
+                    ? "border-b-2 border-red-400 !text-red-400"
                     : "text-slate-400"
                 )
               }

@@ -18,14 +18,6 @@ const TournamentPhases = ({ className }: TournamentPhasesProps) => {
           Keep track of tournament status
         </span>
 
-        <div className="flex items-center rounded-lg bg-green-400/30 p-3 text-sm">
-          <ClockIcon className="mr-2 h-5 w-5 text-green-400" />
-          <h3 className="text-xs font-medium dark:text-green-100">
-            Registration ends in:{" "}
-            <span className="text-green-500">25 days</span>
-          </h3>
-          {/* <TournamentCountdown date={Date.now() + 4000000 * 40} /> */}
-        </div>
         <div className="pl-4">
           <TournamentStepper />
         </div>

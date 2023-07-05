@@ -4,9 +4,9 @@ import { Tab } from "@headlessui/react";
 import {
   TournamentRules,
   TournamentOverview,
-  TournamentTeams
-} from "@/components/core/tournaments/ToutnamentTabs";
-import { TournamentHowItWorks } from "./TournamentHowItWorks";
+  TournamentTeams,
+} from "@/components/core/tournaments/TournamentTabs";
+import { TournamentHowItWorks } from "./HowItWorks";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -17,7 +17,7 @@ export function TournamentTabs() {
     Overview: <TournamentOverview />,
     "How it works": <TournamentHowItWorks />,
     Teams: <TournamentTeams />,
-    Rules: <TournamentRules />
+    Rules: <TournamentRules />,
   });
 
   return (

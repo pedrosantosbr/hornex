@@ -1,3 +1,5 @@
+import { ClockIcon } from "@heroicons/react/20/solid";
+
 const TournamentStepper = () => {
   return (
     <ol className="relative border-l border-gray-200 text-gray-500 dark:border-gray-700 dark:text-gray-400">
@@ -19,7 +21,13 @@ const TournamentStepper = () => {
             />
           </svg>
         </span>
-        <h3 className="text-sm font-medium">Personal Info</h3>
+        <div className="flex flex-col">
+          <h3 className="text-sm font-medium">Resgistration</h3>
+          <div className="mt-1 flex items-center rounded-lg bg-green-500/50 px-2 text-xs font-semibold tracking-tighter text-green-200 ring-1 ring-green-400">
+            <ClockIcon className="mr-1 h-3 w-3" />
+            Ends in 12 days
+          </div>
+        </div>
       </li>
       <li className="mb-10 ml-6 flex items-center">
         <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 ring-8 ring-white dark:bg-gray-700 dark:ring-slate-950">

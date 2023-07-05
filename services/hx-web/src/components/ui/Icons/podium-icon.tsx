@@ -7,6 +7,7 @@ export function PodiumIcon(props: React.SVGAttributes<{}>) {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 343.899 343.899"
       xmlSpace="preserve"
+      fill="currentColor"
       {...props}
     >
       <g>

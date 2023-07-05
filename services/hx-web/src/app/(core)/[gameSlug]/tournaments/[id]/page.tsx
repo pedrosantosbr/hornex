@@ -1,11 +1,10 @@
 "use client";
 import { useState } from "react";
 import TournamentFooter from "@/components/core/tournaments/TournamentFooter";
-import { TournamentContent } from "@/components/core/tournaments/TournamentContent";
-import UserCard from "@/components/ui/UserCard";
 import face from "@/assets/images/face.jpg";
 import TournamentPhases from "@/components/core/tournaments/TournamentPhases/TournamentPhases";
-import { TournamentTabs } from "@/components/core/tournaments/ToutnamentTabs";
+import { TournamentTabs } from "@/components/core/tournaments/TournamentTabs";
+import TournamentDetails from "@/components/core/tournaments/TournamentDetails/TournamentDetails";
 
 type TournamentProps = {
   params: {
@@ -19,23 +18,15 @@ export default function Tournament({ params }: TournamentProps) {
 
   const [creator] = useState({
     name: "@ShadowSlayer",
-    logo: face
+    logo: face,
   });
 
   return (
     <>
       <div className="flex flex-col gap-2 md:grid md:grid-cols-[1fr_1fr_380px] md:gap-0">
-        <div className="col-span-2 pt-4 md:pt-8">
-          <h4 className="text-2xl font-extrabold  tracking-tighter text-slate-300">
-            Tourname Info
-          </h4>
-          <span className="text-sm text-slate-400">
-            Informations about tournament
-          </span>
-          {/* left side wraper */}
-          <TournamentContent>
-            <TournamentTabs />
-          </TournamentContent>
+        <div className="col-span-2 space-y-12 pt-4 md:pt-8">
+          <TournamentDetails />
+          <TournamentTabs />
         </div>
 
         <div className="right-0 top-0 flex flex-col pb-8 md:fixed md:h-screen md:w-[380px] md:pr-8 md:pt-24">

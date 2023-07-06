@@ -11,7 +11,7 @@ const TournamentPhases = ({ className }: TournamentPhasesProps) => {
     <div className="relative flex h-full flex-grow flex-col md:border-l md:border-dashed md:border-slate-800 md:pl-8">
       {/* sidebar header */}
       <div className="mt-6 space-y-6 md:mt-0">
-        <h4 className="text-2xl font-extrabold tracking-tighter text-slate-300">
+        <h4 className="text-2xl font-extrabold tracking-tighter text-white">
           Tournament Phases
         </h4>
         <span className="text-sm text-slate-400">

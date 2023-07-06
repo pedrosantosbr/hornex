@@ -11,8 +11,14 @@ export type CardProps = {
 
 const Card = ({ children, className, ...rest }: CardProps) => {
   return (
-    <div className={classNames("rounded-lg bg-slate-900", className)} {...rest}>
-      <div className="bg rounded-t-lg border-b border-slate-800 bg-slate-900 px-4 py-3 shadow-highlight-100">
+    <div
+      className={classNames(
+        "rounded-lg bg-light-dark shadow-card sm:p-5 md:p-6",
+        className
+      )}
+      {...rest}
+    >
+      <div className="rounded-t-lg border-b border-dashed border-gray-600 sm:pb-5 md:pb-6">
         <h4 className="font-bold tracking-tighter text-slate-300">
           {rest.title}
         </h4>

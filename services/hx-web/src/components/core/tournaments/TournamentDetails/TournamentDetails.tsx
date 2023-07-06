@@ -1,7 +1,6 @@
 import classnames from "classnames";
 import styles from "./TournamentDetails.module.scss";
 import { TicketIcon, TrophyIcon, UsersIcon } from "@heroicons/react/20/solid";
-import { PodiumIcon } from "@/components/ui/Icons/podium-icon";
 
 const TournamentDetails = () => {
   return (
@@ -28,7 +27,7 @@ const TournamentDetails = () => {
           <span className={classnames(styles.tournament_badge_label)}>
             <TrophyIcon className="mr-2 h-4 w-4" /> Max Prize
           </span>
-          <span className="text-right text-lg font-medium text-slate-200">
+          <span className="text-right font-medium text-slate-200">
             1500 BRL
           </span>
         </div>

@@ -21,10 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={classnames(
-          "bg-slate-950 font-inter text-slate-400",
-          fira_code.className
-        )}
+        className={classnames("bg-dark text-slate-400", fira_code.className)}
       >
         {children}
       </body>

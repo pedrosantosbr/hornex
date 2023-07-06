@@ -20,7 +20,7 @@ const TournamentDetails = () => {
             <UsersIcon className="mr-2 h-4 w-4" /> Max Teams
           </span>
           <span className="text-right text-lg font-medium text-slate-200">
-            8
+            16
           </span>
         </div>
         <div className={classnames(styles.tournament_badge_info)}>

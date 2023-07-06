@@ -25,7 +25,7 @@ const TournamentStepper = () => {
           <h3 className="font-medium leading-3 -tracking-wider text-white">
             Resgistration
           </h3>
-          <div className="mt-1 flex items-center rounded-lg px-2 text-xs font-semibold tracking-tighter text-yellow-500">
+          <div className="mt-1 flex items-center rounded-lg text-xs font-semibold font-thin tracking-tighter text-green-500">
             <ClockIcon className="mr-1 h-3 w-3" />
             Ends in 12 days
           </div>

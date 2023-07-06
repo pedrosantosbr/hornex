@@ -33,7 +33,7 @@ export default function TournamentFooter({
             <div className="flex items-center">
               <CurrencyDollarIcon className="mr-1 h-5 w-4 fill-slate-300" />
               <span className="text-xs font-bold text-slate-300">
-                120 of 1500 BRL
+                120/1500 BRL
               </span>
             </div>
             {/* phase status */}

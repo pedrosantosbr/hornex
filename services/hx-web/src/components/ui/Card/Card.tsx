@@ -13,12 +13,12 @@ const Card = ({ children, className, ...rest }: CardProps) => {
   return (
     <div
       className={classNames(
-        "rounded-lg bg-light-dark shadow-card sm:p-5 md:p-6",
+        "rounded-lg bg-light-dark shadow-card p-5 md:p-6",
         className
       )}
       {...rest}
     >
-      <div className="rounded-t-lg border-b border-dashed border-gray-600 sm:pb-5 md:pb-6">
+      <div className="rounded-t-lg border-b border-dashed border-gray-600 pb-5 md:pb-6">
         <h4 className="font-bold tracking-tighter text-slate-300">
           {rest.title}
         </h4>

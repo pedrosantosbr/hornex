@@ -36,7 +36,7 @@ export default function Tournament({ params }: TournamentProps) {
       </div>
 
       <TournamentFooter
-        className="-m-4 bg-dark p-3 md:hidden"
+        className="-mx-4 bg-dark p-3 md:hidden"
         isJoined={isJoined}
         joinTournament={joinTournament}
       />

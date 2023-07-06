@@ -4,12 +4,15 @@ import Card from "@/components/ui/Card";
 import { PodiumIcon, MedalIcon, TeamIcon } from "@/components/ui/Icons";
 import {
   ArrowRightIcon,
+  CalendarIcon,
   ClockIcon,
   CurrencyDollarIcon,
+  FlagIcon,
   MapPinIcon,
   ServerStackIcon,
   TrophyIcon,
 } from "@heroicons/react/20/solid";
+import Tag from "@/components/ui/Tag";
 
 interface TournamentOverviewProps {
   classNames?: string;
@@ -62,14 +65,30 @@ export const TournamentOverview: React.FC<TournamentOverviewProps> = ({
   ];
 
   return (
-    <div className={classnames("m-auto flex max-w-5xl p-4", classNames)}>
-      {/* Tournament Info */}
-      <div className="col-span-4 grid">
-        <div className="flex flex-col items-center rounded-lg border border-slate-700">
-          <TrophyIcon className="h-7 w-7 fill-slate-300" />
-          <h4 className="font-inter tracking-tighter text-slate-200">
-            Max Prize Pool
-          </h4>
+    <div className={classnames("m-auto flex max-w-5xl", classNames)}>
+      <div className="block w-full divide-y divide-slate-800">
+        {/* game & region */}
+        <div className="block pb-6">
+          <p className="text-sm text-gray-400">Game & Region</p>
+          <p className="text-lg font-extralight -tracking-wider text-white lg:text-2xl">
+            League Of Legends
+          </p>
+          <div className="mt-2 flex">
+            <Tag>
+              <div className="flex items-center">
+                <span className="mr-1">🇧🇷</span>
+                <span className="text-xs">Brazil</span>
+              </div>
+            </Tag>
+          </div>
+        </div>
+
+        {/* date & time */}
+        <div className="block py-6">
+          <p className="text-sm text-gray-400">Date & Time</p>
+          <div className="flex items-center text-lg font-extralight -tracking-wider text-white lg:text-2xl">
+            <div className="flex items-center">Jun, 12th 2023</div>
+          </div>
         </div>
       </div>
     </div>

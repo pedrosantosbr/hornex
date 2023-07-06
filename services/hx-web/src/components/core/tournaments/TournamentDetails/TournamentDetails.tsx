@@ -1,12 +1,13 @@
 import classnames from "classnames";
 import styles from "./TournamentDetails.module.scss";
 import { TicketIcon, TrophyIcon, UsersIcon } from "@heroicons/react/20/solid";
+import Badge from "@/components/ui/Badge";
 
 const TournamentDetails = () => {
   return (
     <div className="flex justify-between">
       <div className="tournament_header">
-        <h4 className="text-2xl font-extrabold  tracking-tighter text-slate-300">
+        <h4 className="text-2xl font-extrabold  tracking-tighter text-white">
           Tourname Info
         </h4>
         <span className="text-sm text-slate-400">
@@ -44,9 +45,7 @@ const TournamentDetails = () => {
           <span className={classnames(styles.tournament_badge_label)}>
             <TicketIcon className="mr-2 h-4 w-4" /> Entry fee
           </span>
-          <span className="rounded bg-green-600 px-2 py-1 text-xs tracking-tighter text-green-300">
-            Free Entry
-          </span>
+          <Badge>Free Entry</Badge>
         </div>
       </div>
     </div>

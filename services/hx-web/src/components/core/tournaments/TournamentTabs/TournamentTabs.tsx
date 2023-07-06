@@ -23,7 +23,7 @@ export function TournamentTabs() {
   return (
     <div className="flex w-full flex-col gap-6">
       <Tab.Group>
-        <Tab.List className="flex gap-4 overflow-auto border-b border-slate-800 py-1 no-scrollbar sm:overflow-visible md:gap-10">
+        <Tab.List className="flex gap-4 overflow-auto border-b-2 border-slate-800 py-1 no-scrollbar sm:overflow-visible md:gap-10">
           {Object.keys(tabs).map((tab) => (
             <Tab
               key={tab}

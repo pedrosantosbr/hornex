@@ -61,7 +61,7 @@ export default function ParamTab({ tabMenu, children }: ParamTabTypes) {
       selectedIndex={selectedTabIndex}
       onChange={(index: any) => handleTabChange(index)}
     >
-      <Tab.List className="bg-body dark:bg-dark relative mb-6 text-sm uppercase before:absolute before:bottom-0 before:left-0 before:w-full before:rounded-sm before:bg-gray-200 dark:before:bg-gray-800 sm:gap-8 sm:rounded-none md:before:h-[1px]">
+      <Tab.List className="relative mb-6 bg-body text-sm uppercase before:absolute before:bottom-0 before:left-0 before:w-full before:rounded-sm before:bg-gray-200 dark:bg-dark dark:before:bg-gray-800 sm:gap-8 sm:rounded-none md:before:h-[1px]">
         {isMounted && ["xs", "sm"].indexOf(breakpoint) !== -1 ? (
           <div
             ref={dropdownEl}
@@ -78,7 +78,7 @@ export default function ParamTab({ tabMenu, children }: ParamTabTypes) {
             </button>
             <div
               className={cn(
-                "shadow-large xs:gap-1 absolute left-0 top-full z-10 mt-1 grid w-full gap-0.5 rounded-lg border border-gray-200 bg-white p-2 text-left dark:border-gray-700 dark:bg-gray-800",
+                "xs:gap-1 absolute left-0 top-full z-10 mt-1 grid w-full gap-0.5 rounded-lg border border-gray-200 bg-white p-2 text-left shadow-large dark:border-gray-700 ",
                 visibleMobileMenu
                   ? "visible opacity-100"
                   : "invisible opacity-0"

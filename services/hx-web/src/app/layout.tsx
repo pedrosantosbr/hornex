@@ -1,6 +1,6 @@
 import "./globals.css";
 import classnames from "classnames";
-import { Fira_Code } from "next/font/google";
+import { Fira_Code, Inter_Tight } from "next/font/google";
 
 export const metadata = {
   title: "Create Next App",
@@ -21,7 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={classnames("bg-dark text-slate-400", fira_code.className)}
+        className={classnames(
+          "bg-dark font-inter text-slate-400",
+          fira_code.className
+        )}
       >
         {children}
       </body>

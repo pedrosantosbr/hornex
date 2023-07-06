@@ -9,7 +9,7 @@ import {
   FlagIcon,
   MapPinIcon,
   ServerStackIcon,
-  TrophyIcon
+  TrophyIcon,
 } from "@heroicons/react/20/solid";
 import Tag from "@/components/ui/Tag";
 
@@ -18,44 +18,6 @@ interface OverviewProps {
 }
 
 export const Overview: React.FC<OverviewProps> = ({ classNames }) => {
-  const tournamentDetails = [
-    {
-      icon: TeamIcon,
-      title: "Teams",
-      description: "16 Teams Compete"
-    },
-    {
-      icon: TrophyIcon,
-      title: "Modes",
-      description: "Ranked"
-    },
-    {
-      icon: MedalIcon,
-      title: "Elo",
-      description: "Platinum"
-    },
-    {
-      icon: ClockIcon,
-      title: "Score Update",
-      description: "Every 90 minutes"
-    },
-    {
-      icon: PodiumIcon,
-      title: "Total Score",
-      description: "Top 10 games"
-    },
-    {
-      icon: MapPinIcon,
-      title: "Regions",
-      description: "Gold Coast - Au"
-    },
-    {
-      icon: ServerStackIcon,
-      title: "Servers",
-      description: "All Servers"
-    }
-  ];
-
   const countries = [
     { flag: "🇦🇷", name: "Argentina" },
     { flag: "🇧🇴", name: "Bolivia" },
@@ -63,7 +25,7 @@ export const Overview: React.FC<OverviewProps> = ({ classNames }) => {
     { flag: "🇨🇱", name: "Chile" },
     { flag: "🇨🇴", name: "Colombia" },
     { flag: "🇪🇨", name: "Ecuador" },
-    { flag: "🇵🇪", name: "Peru" }
+    { flag: "🇵🇪", name: "Peru" },
   ];
 
   return (

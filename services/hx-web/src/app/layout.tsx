@@ -1,6 +1,6 @@
 import "./globals.css";
 import classnames from "classnames";
-import { Fira_Code, Inter_Tight } from "next/font/google";
+import { Fira_Code, JetBrains_Mono } from "next/font/google";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,6 +8,12 @@ export const metadata = {
 };
 
 const fira_code = Fira_Code({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const jetbrains_mono = JetBrains_Mono({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
@@ -23,7 +29,7 @@ export default function RootLayout({
       <body
         className={classnames(
           "bg-dark font-inter text-slate-400",
-          fira_code.className
+          jetbrains_mono.className
         )}
       >
         {children}

@@ -3,6 +3,7 @@ import { Tab } from "@headlessui/react";
 
 import {
   Rules,
+  Prizes,
   Overview,
   Teams,
   HowItWorks
@@ -15,7 +16,7 @@ function classNames(...classes: string[]) {
 export function TournamentTabs() {
   let [tabs] = useState({
     Overview: <Overview />,
-    Prize: <Overview />,
+    Prizes: <Prizes />,
     "How it works": <HowItWorks />,
     Teams: <Teams />,
     Rules: <Rules />
@@ -30,7 +31,7 @@ export function TournamentTabs() {
               key={tab}
               className={({ selected }) =>
                 classNames(
-                  "-mb-1.5 py-2 text-sm font-medium text-slate-400 outline-none transition-colors hover:text-sky-400",
+                  "-mb-1.5 whitespace-nowrap py-2 text-sm font-medium text-slate-400 outline-none transition-colors hover:text-sky-400",
                   selected
                     ? "border-b-2 border-sky-400 !text-sky-400"
                     : "text-slate-400"

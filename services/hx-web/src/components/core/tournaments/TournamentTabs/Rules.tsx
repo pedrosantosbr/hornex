@@ -1,6 +1,6 @@
 import classnames from "classnames";
 
-interface TournamentRulesProps {
+interface RulesProps {
   classNames?: string;
 }
 
@@ -29,9 +29,7 @@ const RulesSubHeading = ({ children, className }: RulesSubHeadingProps) => (
   </h3>
 );
 
-export const TournamentRules: React.FC<TournamentRulesProps> = ({
-  classNames
-}) => {
+export const Rules: React.FC<RulesProps> = ({ classNames }) => {
   return (
     <div className={classnames("px-2", classNames)}>
       <h2 className="m-auto max-w-4xl text-left text-base font-bold tracking-tighter md:text-xl">

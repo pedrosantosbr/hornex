@@ -18,13 +18,13 @@ export default function Tournament({ params }: TournamentProps) {
 
   const [creator] = useState({
     name: "@ShadowSlayer",
-    logo: face,
+    logo: face
   });
 
   return (
     <>
       <div className="flex flex-col gap-2 md:grid md:grid-cols-[1fr_1fr_380px] md:gap-0">
-        <div className="col-span-2 space-y-12 pt-4 md:pt-8">
+        <div className="col-span-2 space-y-6 pt-4 md:space-y-12 md:pt-8">
           <TournamentDetails />
           <TournamentTabs />
         </div>
@@ -36,7 +36,7 @@ export default function Tournament({ params }: TournamentProps) {
       </div>
 
       <TournamentFooter
-        className="-m-4 bg-slate-950 p-3 md:hidden"
+        className="-m-4 bg-dark p-3 md:hidden"
         isJoined={isJoined}
         joinTournament={joinTournament}
       />

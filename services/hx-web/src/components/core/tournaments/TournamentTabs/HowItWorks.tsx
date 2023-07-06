@@ -6,13 +6,11 @@ import graphs from "@/assets/images/graphs.webp";
 import infinity from "@/assets/images/infinity.png";
 import award from "@/assets/images/award.webp";
 
-interface TournamentTeamsProps {
+interface HowItWorksProps {
   classNames?: string;
 }
 
-export const TournamentHowItWorks: React.FC<TournamentTeamsProps> = ({
-  classNames
-}) => {
+export const HowItWorks: React.FC<HowItWorksProps> = ({ classNames }) => {
   const howItWorksCards = [
     {
       image: connect,
@@ -51,7 +49,7 @@ export const TournamentHowItWorks: React.FC<TournamentTeamsProps> = ({
             {howItWorksCards.map((card) => (
               <li
                 key={card.title}
-                className="divide-y divide-slate-700 rounded-lg shadow-highlight-all"
+                className="shadow-highlight-all divide-y divide-slate-700 rounded-lg"
               >
                 <figure>
                   <Image

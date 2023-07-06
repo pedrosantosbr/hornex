@@ -1,12 +1,10 @@
 import classnames from "classnames";
 
-interface TournamentTeamsProps {
+interface TeamsProps {
   classNames?: string;
 }
 
-export const TournamentTeams: React.FC<TournamentTeamsProps> = ({
-  classNames
-}) => {
+export const Teams: React.FC<TeamsProps> = ({ classNames }) => {
   const teams = [
     {
       name: "Phoenix",

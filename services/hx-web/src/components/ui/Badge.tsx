@@ -1,10 +1,18 @@
+import classnames from "classnames";
+
 type BadgeProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Badge = ({ children }: BadgeProps) => {
+const Badge = ({ children, className }: BadgeProps) => {
   return (
-    <span className="mr-2 rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+    <span
+      className={classnames(
+        "flex items-center justify-center gap-1 rounded bg-green-100 px-1 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300",
+        className
+      )}
+    >
       {children}
     </span>
   );

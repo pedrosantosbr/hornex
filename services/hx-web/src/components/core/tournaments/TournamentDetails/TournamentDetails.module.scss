@@ -1,5 +1,5 @@
 .tournament_badge_info {
-  @apply flex h-[50px] flex-col justify-between border-r border-dashed border-gray-700 px-5 last:border-r-0;
+  @apply flex h-[50px] flex-col justify-between pr-5 last:border-r-0 md:border-r md:border-dashed md:border-gray-700 md:px-5;
 }
 .tournament_badge_label {
   @apply flex text-xs;

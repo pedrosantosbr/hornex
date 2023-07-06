@@ -24,9 +24,11 @@ const TournamentStepper = () => {
         </span>
         <div className="flex flex-col">
           <h3 className="font-medium leading-3  text-white">Resgistration</h3>
-          <div className="mt-1 flex items-center rounded-lg text-xs font-thin text-green-500">
-            {/* TODO: insert */}
-            <Badge>Ends in 14 days</Badge>
+          <div className="mt-1 flex items-center">
+            <Badge>
+              <ClockIcon className="w-3.5" />
+              Ends in 14 days
+            </Badge>
           </div>
         </div>
       </li>

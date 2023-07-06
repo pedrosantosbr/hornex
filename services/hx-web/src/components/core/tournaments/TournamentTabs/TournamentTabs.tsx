@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Tab } from "@headlessui/react";
 
 import {
-  TournamentRules,
-  TournamentOverview,
-  TournamentTeams,
+  Rules,
+  Overview,
+  Teams,
+  HowItWorks
 } from "@/components/core/tournaments/TournamentTabs";
-import { TournamentHowItWorks } from "./HowItWorks";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -14,10 +14,11 @@ function classNames(...classes: string[]) {
 
 export function TournamentTabs() {
   let [tabs] = useState({
-    Overview: <TournamentOverview />,
-    "How it works": <TournamentHowItWorks />,
-    Teams: <TournamentTeams />,
-    Rules: <TournamentRules />,
+    Overview: <Overview />,
+    Prize: <Overview />,
+    "How it works": <HowItWorks />,
+    Teams: <Teams />,
+    Rules: <Rules />
   });
 
   return (
